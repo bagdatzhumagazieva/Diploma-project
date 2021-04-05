@@ -1,0 +1,63 @@
+@import "src/assets/scss/vars";
+
+@mixin loader($name, $count) {
+  $dot-color: $main_50, $main_60, $main_70, $main_80;
+  animation: #{$name} 1.5s linear infinite;
+  @keyframes #{$name} {
+    0% {
+      background: nth($dot-color, ($count) % 4 + 1);
+    }
+    25% {
+      background: nth($dot-color, ($count + 1) % 4 + 1);
+    }
+    50% {
+      background: nth($dot-color, ($count + 2) % 4 + 1);
+    }
+    75% {
+      background: nth($dot-color, ($count + 3) % 4 + 1);
+    }
+    100% {
+      background: nth($dot-color, ($count + 4) % 4 + 1);
+    }
+  }
+}
+
+.logo-loader {
+  width: 100%;
+  height: 100%;
+  .logo-loader_label {
+    color: $main_50;
+  }
+  .loader {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    .loader__item {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $main_50;
+    }
+    .loader__item1 {
+      top: 0;
+      left: calc(50% - 4px);
+      @include loader('loader-1', 1);
+    }
+    .loader__item2 {
+      right: 0;
+      top: calc(50% - 4px);
+      @include loader('loader-2', 2);
+    }
+    .loader__item3 {
+      bottom: 0;
+      left: calc(50% - 4px);
+      @include loader('loader-3', 3);
+    }
+    .loader__item4 {
+      left: 0;
+      top: calc(50% - 4px);
+      @include loader('loader-4', 4);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "src/assets/scss/vars";
+
+.shop-prize{
+
+  &__searcher-input {
+    width: 424px;
+  }
+  &__btn {
+    height: 52px;
+    width: 191px;
+  }
+
+  &__item__icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+
+    path {
+      stroke: $grey_additional_1;
+    }
+
+    &:hover {
+      path {
+        stroke: $main_50;
+      }
+    }
+  }
+}

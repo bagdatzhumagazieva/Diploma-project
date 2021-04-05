@@ -1,0 +1,25 @@
+@import "src/assets/scss/vars";
+
+.education-page {
+  .courses {
+    .courses__user-courses {
+
+      .user-courses__card {
+        width: 376px;
+        margin-right: 24px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .courses__available-courses {
+      width: 276px;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

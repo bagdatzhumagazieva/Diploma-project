@@ -1,0 +1,50 @@
+@import "src/assets/scss/vars";
+
+.task-general-info {
+  width: 100%;
+
+  &__groups {
+    width: 358px;
+  }
+
+  &__static-graph {
+    width: 624px;
+    background: #F2F3F6;
+    border: 1px solid $grey_placeholder;
+    border-radius: $default_border_radius;
+  }
+
+  &__photo-mark {
+    width: 624px;
+  }
+
+  .task-general-info__employee-list {
+    overflow-y: auto;
+    width: 636px;
+    max-height: 340px;
+    background-color: #F2F3F6;
+    border-radius: $default_border_radius;
+
+    &__item {
+      border-bottom: 1px solid $grey_outline;
+    }
+
+    &__img {
+      width: 36px!important;
+      height: 36px;
+      border-radius: 30px;
+    }
+
+  }
+  &__radio-image {
+    background: #F2F3F6;
+    width: 648px;
+    border-radius: $default_border_radius;
+  }
+
+  &__statistic {
+    background: #F2F3F6;
+    width: 648px;
+    border-radius: $default_border_radius;
+  }
+}

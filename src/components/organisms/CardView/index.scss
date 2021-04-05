@@ -1,0 +1,21 @@
+@import "src/assets/scss/vars";
+
+.card-view {
+  padding: 48px 64px;
+  background: $white;
+  border-radius: $default_border_radius;
+  margin-bottom: 32px;
+  min-width: 776px;
+  width: 776px;
+  min-height: 400px;
+
+  .card-view__main-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-view__fav-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

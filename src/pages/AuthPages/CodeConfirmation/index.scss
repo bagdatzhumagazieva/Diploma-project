@@ -1,0 +1,15 @@
+$code_confirmation_input_button_width: 167px;
+$code_confirmation_send_button_height: 53px;
+
+.code-confirmation__input-text-sms,
+.code-confirmation__send-button {
+  width: $code_confirmation_input_button_width;
+}
+
+.code-confirmation__send-button {
+  height: $code_confirmation_send_button_height;
+}
+
+.code-confirmation {
+  margin-bottom: 190px;
+}

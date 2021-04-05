@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.marketplace-shell {
+  width: 100%;
+
+  &__filters {
+    .marketplace-shell__type {
+      &__button {
+        background-color: $white;
+        border-radius: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &--active, &:hover {
+          color: $main_50 !important;
+          background: $main_90;
+        }
+      }
+    }
+
+    .marketplace-shell__sort {
+      &__select {
+        width: 154px;
+      }
+    }
+  }
+
+  &__card {
+    width: 276px;
+  }
+}

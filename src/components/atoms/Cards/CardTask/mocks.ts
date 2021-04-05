@@ -1,0 +1,55 @@
+import { IUserTask } from 'src/components/atoms/Cards/CardTask/types';
+import { USER_TASK_STATUSES } from 'src/components/atoms/Cards/CardTask/consts';
+
+export const ExampleCardTasksCurrent: IUserTask[] = [
+  {
+    status: USER_TASK_STATUSES.AWAITING,
+    type: 'games',
+    imgSrc:  '',
+    title: 'Марио в стране Санофивилль',
+    info: 'Начните игру',
+    progress: 0,
+    lastActivity: '4 часа назад',
+    link: '',
+  },
+  {
+    status: USER_TASK_STATUSES.AWAITING,
+    type: 'ad',
+    imgSrc: '',
+    title: 'King Kong Adventures',
+    info: 'Вас ожидает учебный курс',
+    progress: 0,
+    lastActivity: 'Вчера в 19:45',
+    link: '',
+  },
+  {
+    status: USER_TASK_STATUSES.COMPLETED,
+    type: 'video',
+    imgSrc: '',
+    title: 'Kaiju the Destroyer',
+    info: 'Вы окончили учебный курс',
+    progress: 100,
+    lastActivity: '23 декабря, 2019',
+    link: '',
+  },
+  {
+    status: USER_TASK_STATUSES.AWAITING,
+    type: 'audiopodcasts',
+    imgSrc: '',
+    title: 'Kaiju the Destroyer Марио в стране Санофивилль Kaiju the Destroyer Марио в стране Санофивилль',
+    info: 'Вас ожидает аудиоподкаст',
+    progress: 0,
+    lastActivity: '10 декабря, 2019',
+    link: '',
+  },
+  {
+    status: USER_TASK_STATUSES.AWAITING,
+    type: 'games',
+    imgSrc: '',
+    title: 'Марио в стране Санофивилль',
+    info: 'Пройдите 2 уровня в игре',
+    progress: 0,
+    lastActivity: '4 часа назад',
+    link: '',
+  },
+];

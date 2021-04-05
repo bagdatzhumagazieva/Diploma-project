@@ -1,0 +1,112 @@
+@import "src/assets/scss/vars";
+
+.card-education {
+  border-radius: $default_border_radius;
+  background: $white;
+
+  &__image-wrapper {
+    border-radius: $default_border_radius;
+    border: 1px solid $grey_additional_2;
+
+    .card-education__image {
+      border-radius: $default_border_radius - 1;
+    }
+
+    .card-education__rating {
+      background: $white;
+      border-radius: $default_border_radius;
+      padding: 6px 17px 6px 10px;
+      bottom: 16px;
+      left: 16px;
+      z-index: 2;
+    }
+
+    .card-education__favorite-image {
+      z-index: 2;
+      right: 8px;
+      top: 8px;
+      opacity: 0.0;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .card-education__submit-button {
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .card-education__image-overlay {
+      opacity: 0.0;
+      top: 0;
+      left: 0;
+      background: $black;
+      border-radius: $default_border_radius;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .card-education__favorite-image {
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: 1.0;
+      }
+      .card-education__image-overlay {
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: .45;
+      }
+
+      .card-education__submit-button {
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: 1.0;
+      }
+    }
+
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 63px;
+    white-space: normal;
+    text-align: left;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+
+
+  &--normal {
+    .card-education__image-wrapper {
+      height: 224px;
+      max-height: 224px;
+    }
+    .card-education__players {
+      min-width: 74px;
+    }
+  }
+
+  &--small {
+    .card-education__image-wrapper {
+      height: 164px;
+      max-height: 164px;
+    }
+    .card-education__players {
+      min-width: 52px;
+    }
+  }
+}

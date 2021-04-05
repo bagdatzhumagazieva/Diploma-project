@@ -1,0 +1,23 @@
+@import "src/assets/scss/vars.scss";
+
+$auth_footer_padding_y: 64px;
+$auth_footer_button_opacity: 0.48;
+
+.auth-footer {
+  padding: $auth_footer_padding_y 0;
+  background: transparent;
+
+  &_border--white {
+    border-top: 2px solid rgba($white, 0.1);
+  }
+
+  &_border--blacker {
+    border-top: 2px solid $grey_background;
+  }
+
+  .auth-footer__button {
+    &--active {
+      opacity: $auth_footer_button_opacity;
+    }
+  }
+}

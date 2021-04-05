@@ -1,0 +1,9 @@
+.preview {
+  &__content {
+    overflow-x: auto;
+    .preview__game-detail-wrapper {
+      width: 948px;
+      background-color: white;
+    }
+  }
+}

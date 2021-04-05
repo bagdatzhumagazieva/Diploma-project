@@ -1,0 +1,16 @@
+@import "src/assets/scss/vars";
+
+.icon-certificate {
+  background: $white;
+  padding: 6px 6px 9px;
+  width: 90px;
+  border: 2px solid #2ABE42;
+  border-radius: 6px;
+  cursor: pointer;
+  .icon-certificate__medal {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+}

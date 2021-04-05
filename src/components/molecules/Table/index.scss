@@ -1,0 +1,119 @@
+@import "src/assets/scss/vars";
+$image_size: 36px;
+$hover_color: #E9E9ED;
+
+.table-wrapper {
+  overflow: auto;
+  .table {
+    position: relative;
+    background: $white;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+    border-collapse: collapse;
+    border-radius: $default_border_radius;
+
+    .table__header {
+      color: $grey_additional_2;
+      .header__row {
+        border-bottom: 1px solid $grey_outline;
+      }
+      .header__cell {
+        padding: 20px 24px;
+        text-align: left;
+        cursor: pointer;
+        &--fixed {
+          position: sticky;
+          background: white;
+          z-index: 2;
+          &--left {
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.04);
+          }
+          &--right {
+            box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.04);
+          }
+        }
+        &--active {
+          background: $grey_outline;
+        }
+        &:hover {
+          background: $grey_outline;
+        }
+      }
+      .header__cell.header--checkbox, .header__cell.header--radio {
+        padding-left: 24px;
+        padding-right: 16px;
+      }
+    }
+
+    .table__content {
+      .content__row {
+        border-bottom: 1px solid $grey_outline;
+        &:hover {
+          background: $hover_color;
+          .content__cell--active, .content__cell--fixed {
+            background: $hover_color;
+          }
+          .content__cell--selected {
+            background: $main_90;
+          }
+        }
+        .content__cell {
+          padding: 24px;
+          &--fixed {
+            position: sticky;
+            background: $white;
+            z-index: 2;
+            &--left {
+              box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.04);
+            }
+            &--right {
+              box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.04);
+            }
+          }
+          &--active {
+            background: $grey_divider;
+          }
+          &--selected {
+            background: $main_90;
+          }
+        }
+        .content__cell--checkbox, .content__cell--radio {
+          padding: 24px 16px 24px 24px;
+        }
+      }
+      &-image {
+        width: $image_size;
+        height: $image_size;
+        background-blend-mode: normal;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.table__drawer {
+  background: $white;
+  position: fixed;
+  bottom: 0;
+  left: 216px;
+  width: calc(100% - 216px);
+  padding: 24px 32px;
+  z-index: 2;
+  .table__drawer__btn {
+    padding: 0;
+    background: $white;
+    margin-right: 48px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.layout--minified {
+  .table__drawer {
+    left: 72px;
+    width: calc(100% - 72px);
+  }
+}

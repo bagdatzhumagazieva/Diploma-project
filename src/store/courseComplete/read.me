@@ -1,0 +1,13 @@
+1. На каждый урок модуля создаешь: /api/v1/courses/{course_id}/modules/{module_id}/card_completes/ (POST),
+потом чтобы завершить /api/v1/courses/{course_id}/modules/{module_id}/card_completes/{module_card_complete_id}/finish (PUT)
+
+2. После завершения всех уроков модуля создаешь тест /api/v1/courses/{course_id}/modules/{module_id}/complete_attempts/ (POST)
+он возвращает список карточек для теста, а это для экзамена /api/v1/courses/{course_id}/complete_attempts/ (POST)
+
+3. /api/v1/cards/full (GET) возвращает список карточек с вопросами по айдишкам карточек
+
+4. Чтобы ответить на вопрос карточки /api /v1 /courses /complete_attempts /{complete_attempt_id} /attempt_questions / (POST)
+
+5. Чтобы взять ответы теста /api/v1/courses/complete_attempts/{complete_attempt_id}/attempt_questions/ (GET)
+вернет все ответы по тесту (там на каждый вопрос false/true сами количество покажете),
+а статус теста /api/v1/courses/{course_id}/modules/{module_id}/{complete_attempt_id} (провалил не провалил) (GET)

@@ -1,0 +1,34 @@
+@import "src/assets/scss/vars";
+
+.card-information {
+  background: $white;
+  border-radius: $default_border_radius;
+  min-height: 132px;
+
+  .card-information__image {
+    max-width: 100%;
+  }
+
+  .card-information__content {
+    width: 210px;
+    max-width: 210px;
+
+    .card-information__description {
+      margin-bottom: 7px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        display: inline-block;
+        content: '';
+        width: 8px;
+        min-width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 6px;
+        background: $grey_additional_2;
+      }
+    }
+  }
+}

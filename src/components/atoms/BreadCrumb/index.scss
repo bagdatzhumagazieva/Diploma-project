@@ -1,0 +1,17 @@
+@import "src/assets/scss/vars";
+
+.breadcrumb {
+  border-radius: 2px;
+  width: fit-content;
+  .breadcrumb__arrow {
+    margin: 0 10px;
+    transform: rotate(180deg);
+    width: 6px;
+    height: auto;
+  }
+
+  .breadcrumb__separator {
+    color: $grey_additional_2;
+    margin: 0 6px;
+  }
+}

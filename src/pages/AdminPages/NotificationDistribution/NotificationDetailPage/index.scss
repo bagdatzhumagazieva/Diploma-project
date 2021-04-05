@@ -1,0 +1,13 @@
+@import "src/assets/scss/vars";
+
+.notification-detail {
+  width: 876px;
+  background-color: $white;
+  border-radius: $default_border_radius;
+
+  &__icon {
+    border: 0.5px solid $grey_outline;
+    border-radius: $default_border_radius;
+    padding: 10px;
+  }
+}

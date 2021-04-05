@@ -1,0 +1,44 @@
+@import "src/assets/scss/vars";
+
+.favorite-icon {
+  cursor: pointer;
+  .favorite-icon__path {
+    fill: none;
+    stroke: $white;
+    &--active {
+      fill: $main_50!important;
+      stroke: $main_50!important;
+    }
+    .favorite-icon__path--active {
+      fill: $main_50;
+      stroke: $main_50;
+    }
+  }
+}
+.favorite-icon--hover:hover {
+  .favorite-icon__path {
+    fill: none;
+    stroke:$main_50;
+  }
+}
+
+.favorite-icon--bordered {
+  .favorite-icon__path {
+    stroke: $main_50;
+
+    &--active {
+      fill: none;
+      stroke: $main_40;
+    }
+  }
+  &:hover {
+    .favorite-icon__path {
+      stroke: $main_60;
+    }
+  }
+  &:focus {
+    .favorite-icon__path {
+      stroke: $main_40;
+    }
+  }
+}

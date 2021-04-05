@@ -1,0 +1,76 @@
+@import "src/assets/scss/vars";
+
+$image_certificate_height: 230px;
+$image_certificate_border_size: 0.5px;
+$image_certificate_box_shadow: 0 4px 8px;
+$image_certificate_side_columns_left: 13px;
+$image_certificate_side_columns_width: 10px;
+$image_certificate_side_columns_width_left_width: 4px;
+$image_certificate_side_columns_width_right_width: 2px;
+$image_certificate_content_title_font_size: 20px;
+$image_certificate_content_title_line_height: 25px;
+$image_certificate_content_game_name_width: 210px;
+$image_certificate_bottom_font_size: 6px;
+$image_certificate_bottom_line_height: 7px;
+$image_certificate_author_position: 16px;
+
+.image-certificate {
+  height: $image_certificate_height;
+  border-radius: $default_border_radius;
+
+  &__side-columns {
+    left: $image_certificate_side_columns_left;
+    width: $image_certificate_side_columns_width;
+    height: calc(100% - 2px);
+    .side-columns__item {
+      background: linear-gradient(180deg, #CDAD37 0%, rgba(239, 228, 186, 0) 116.74%);
+    }
+
+    .side-columns__item--left {
+      width: $image_certificate_side_columns_width_left_width;
+    }
+
+    .side-columns__item--right {
+      width: $image_certificate_side_columns_width_right_width;
+    }
+  }
+  .image-certificate__block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: 0 auto;
+  }
+
+  &__content {
+    .content__title {
+      color: $brown;
+      font-size: $image_certificate_content_title_font_size;
+      line-height: $image_certificate_content_title_line_height;
+      text-transform: uppercase;
+      letter-spacing: $regular_letter_spacing;
+      font-weight: normal;
+    }
+
+    .content__game-name {
+      width: $image_certificate_content_game_name_width;
+    }
+  }
+
+  &__author {
+    font-size: $image_certificate_bottom_font_size;
+    line-height: $image_certificate_bottom_line_height;
+    color: $main_50;
+    letter-spacing: $regular_letter_spacing;
+    right: $image_certificate_author_position;
+    bottom: $image_certificate_author_position;
+  }
+}
+
+
+.image-certificate__image {
+  z-index: 0;
+  border-radius: $default_border_radius;
+  border: $image_certificate_border_size solid $grey_outline;
+  margin: -1px;
+}

@@ -1,0 +1,29 @@
+@import "src/assets/scss/vars";
+
+.employee-search__suggestion {
+  cursor: pointer;
+  padding: 8px 16px;
+
+  .employee-search__suggestion__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    background: $grey_divider;
+  }
+}
+.employee-search__suggestion--active {
+  background: $grey_divider;
+}
+
+.employee-search__empty {
+  z-index: 2;
+  position: absolute;
+  background: $white;
+  margin-top: 6px;
+  border: 1px solid $grey_outline;
+  border-radius: 6px;
+  padding: 8px 16px;
+}

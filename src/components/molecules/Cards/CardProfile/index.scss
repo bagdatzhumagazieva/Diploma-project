@@ -1,0 +1,59 @@
+@import "src/assets/scss/vars";
+
+.card-profile {
+  &__content {
+    .content__left {
+      .card-profile__group {
+
+        .group__item {
+          padding: 3px 16px;
+          background: $main_90;
+          border-radius: $default_border_radius;
+        }
+
+        .card-profile__dots {
+          cursor: pointer;
+          height: 25px;
+
+          .dots__item {
+            border-radius: 30px;
+            width: 2px;
+            height: 2px;
+            border: 2px solid $grey_additional_2;
+          }
+        }
+      }
+    }
+
+    .card_profile__vertical-line {
+      min-width: 1px;
+      min-height: 100%;
+      background: $grey_outline;
+    }
+
+    .content__right {
+      .card-profile__cur-points {
+        .cur-points__image {
+          width: 32px;
+          height: 32px;
+          min-width: 32px;
+        }
+      }
+    }
+  }
+}
+
+//Group Hint
+.card-profile__group-tooltip.tippy-tooltip {
+  max-width: 554px !important;
+  .tippy-content {
+    padding: 24px 20px 16px;
+  }
+  .group__hint {
+    .hint__item {
+      padding: 3px 16px;
+      background: $main_90;
+      border-radius: $default_border_radius;
+    }
+  }
+}

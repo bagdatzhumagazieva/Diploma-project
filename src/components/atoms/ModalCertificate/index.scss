@@ -1,0 +1,16 @@
+$image_certificate_width: 330px;
+$modal_certificate_bottom_border_radius: 0 0 6px 6px;
+
+.image-certificate {
+  width: $image_certificate_width;
+  margin: 0 auto;
+}
+.modal-certificate__bottom {
+  border-radius: $modal_certificate_bottom_border_radius;
+}
+
+.modal-certificate__id {
+  width: 224px;
+  word-break: break-all;
+  text-align: right;
+}

@@ -1,0 +1,16 @@
+@import "src/assets/scss/vars";
+
+.reward {
+  .reward__content {
+    background-color: $white;
+    border-radius: $default_border_radius;
+
+    .reward__input {
+      width: 358px;
+
+      &--wide {
+        width: 470px;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "src/assets/scss/vars";
+
+.mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba($main_50, 0.6);
+  display: block;
+  position: relative;
+
+  .mark__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background: rgba($white, 0.6);
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    background: rgba($white, 0.6);
+    background: $main_50;
+    border-radius: 50%;
+  }
+}
+
+.mark--success {
+  background: rgba($green, 0.6);
+
+  &:after {
+    background: $green;
+  }
+}
+
+.mark--failed {
+  background: rgba($red, 0.6);
+
+  &:after {
+    background: $red;
+  }
+}

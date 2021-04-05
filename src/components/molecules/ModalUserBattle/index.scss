@@ -1,0 +1,39 @@
+@import "src/assets/scss/vars";
+
+.modal-user-battle {
+  .modal-user-battle__card-profile {
+    .content__right {
+      align-self: flex-end !important;
+    }
+  }
+  .modal-user-battle__block {
+    width: 376px;
+    height: fit-content;
+    background-color: #FFFFFF;
+    border-radius: $default_border_radius;
+
+    .modal-user-battle__user-info {
+      width: 124px;
+
+      .user-info__name {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    .modal-user-battle__passed-courses-games {
+      .passed-courses-games__name {
+        text-align: left;
+        white-space: normal;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .modal-user-battle__block--passed {
+    max-height: 450px;
+    overflow-y: auto;
+  }
+}

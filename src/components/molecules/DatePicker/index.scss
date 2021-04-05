@@ -1,0 +1,15 @@
+$date_picker_day_select: 76px;
+$date_picker_month_select: 136px;
+$date_picker_year_select: 93px;
+
+.date-picker {
+  .date-picker__day-select {
+    width: $date_picker_day_select;
+  }
+  .date-picker__month-select {
+    width: $date_picker_month_select;
+  }
+  .date-picker__year-select {
+    width: $date_picker_year_select;
+  }
+}

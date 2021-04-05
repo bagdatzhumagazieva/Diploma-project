@@ -1,0 +1,65 @@
+@import "src/assets/scss/vars";
+
+.header {
+  z-index: 5;
+  background: $white;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  box-shadow:  0 8px 16px rgba(0, 0, 0, 0.04);
+
+  .header__company {
+    display: none;
+    .header__arrow-img-wrapper {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background: $grey_divider;
+      border-radius: 36px;
+
+      .header__arrow-img {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        transition: .15s ease-in;
+
+        &--minified {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    .header__logo {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      object-fit: cover;
+    }
+  }
+
+  &__searcher {
+    width: 676px;
+  }
+
+  .header__user-image {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid $grey_additional_2;
+  }
+
+  .header__card-account {
+    right: 0;
+    top: 78px;
+    z-index: 6;
+  }
+}
+
+
+@media screen and (max-width: $medium_breakpoint_width) {
+  .header__company {
+    display: flex !important;
+  }
+}

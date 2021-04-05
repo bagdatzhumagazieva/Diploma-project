@@ -1,0 +1,39 @@
+@import 'src/assets/scss/vars';
+
+.level {
+  background-color: white;
+  .level__header {
+    .header__title {
+      .title__icon {
+        display: none;
+      }
+
+      &:hover {
+        .title__icon {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.trial-addition-edition__wrapper {
+  background-color: #F2F3F6;
+  border: 1px solid $grey_placeholder;
+  box-sizing: border-box;
+  border-radius: $default_border_radius;
+}
+
+.level-addition-edition {
+  background: white;
+  border: 1px solid $grey_outline;
+  border-radius: 5px;
+
+  .level-addition-edition__name {
+    width: 470px;
+  }
+
+  .level-addition-edition__submit-button {
+    padding: 11px 56px;
+  }
+}

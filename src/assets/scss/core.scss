@@ -1,0 +1,260 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font: inherit;
+}
+
+body, html {
+  height: 100%;
+  @extend .font;
+  scroll-behavior: smooth;
+  color: $black;
+}
+
+// Inputs
+input {
+  border: 0;
+  outline: 0;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid $grey_outline;
+  border-radius: $default_border_radius;
+  outline: none;
+  color: $black;
+  padding: 11px 16px;
+
+  &::placeholder {
+    color: $grey_additional_2;
+  }
+
+  &:focus {
+    border-color: $main_50;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.covered {
+  position: relative;
+  overflow: hidden;
+  user-select: none !important;
+  pointer-events: none !important;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $grey_outline;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+                    90deg,
+                    rgba(#fff, 0) 0,
+                    rgba(#fff, 0.2) 20%,
+                    rgba(#fff, 0.5) 60%,
+                    rgba(#fff, 0)
+    );
+    animation: shimmer 2s infinite;
+    content: '';
+    z-index: 4;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.font {
+  font-family: $fonts;
+}
+.text-center {
+  text-align:center !important
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-white {
+  color: white;
+}
+.text-primary {
+  color: #FF9800;
+}
+
+.fill_w {
+  width: 100%;
+}
+
+.fill_h {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto!important;
+}
+
+.max_w {
+  max-width: 100%;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.vh_100 {
+  height: 100vh;
+}
+
+.vw_100 {
+  width: 100vw;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Default text overflow
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.word-break_break-all {
+  word-break: break-all;
+}
+
+.white-space_nowrap {
+  white-space: nowrap;
+}
+
+.inner-html {
+  word-wrap: break-word;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  p, blockquote, h1, h2, h3, h4, h5, h6 {
+    margin: revert !important;
+    padding: revert !important;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.grid {
+  width: $grid_width;
+  max-width: $grid_width;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Setting positions
+$position_prefix: 'pos';
+@each $cur_position in $positions {
+  .#{$position_prefix}_#{$cur_position} {
+    position: $cur_position;
+  }
+}
+
+// Setting specific color
+$colors_prefix: 'color';
+@each $key, $value in $colors {
+  // example: color_red
+  .#{$colors_prefix}_#{$key} {
+    color: $value;
+  };
+  // example: color_red--hover
+  .#{$colors_prefix}_#{$key}--hover:hover {
+    color: $value;
+  };
+  // example: color_red__bg
+  .#{$colors_prefix}_#{$key}__bg {
+    background-color: $value;
+  };
+  // example: color_red__bg--hover
+  .#{$colors_prefix}_#{$key}__bg--hover:hover {
+    background-color: $value;
+  };
+
+  .#{$colors_prefix}_#{$key}__scrollbar {
+    &::-webkit-scrollbar {
+      height: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 360px;
+      background-color: rgba( $value, .3);
+    }
+  }
+}
+
+// Setting Text Decoration
+$text_dec_prefix: 'text-decoration';
+@each $cur_text_dec in $text_decorations {
+  .#{$text_dec_prefix}_#{$cur_text_dec} {
+    text-decoration: $cur_text_dec;
+  }
+}
+
+// Setting text transforms
+$text_transform_prefix: 'text';
+@each $cur_text_transform in $text_transforms {
+  .#{$text_transform_prefix}_#{$cur_text_transform} {
+    text-transform: $cur_text_transform;
+  }
+}
+
+
+// Setting overflow 'overflow'
+$overflow_prefix: 'overflow';
+@each $cur_overflow in $overflows {
+  .#{$overflow_prefix}_#{$cur_overflow} {
+    overflow: $cur_overflow;
+  }
+}

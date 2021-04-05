@@ -1,0 +1,25 @@
+$content_width: 380px;
+$padding_top: 48px;
+$margin_left: 160px;
+$content_padding: 80px 0;
+
+.check-user-activation {
+  padding-top: $padding_top;
+
+  .check-user-activation__logo {
+    margin-left: $margin_left;
+  }
+
+  .check-user-activation__content {
+    padding: $content_padding;
+
+    .content__block {
+      width: $content_width;
+
+      .block__img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

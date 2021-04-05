@@ -1,0 +1,38 @@
+@import 'src/assets/scss/vars';
+
+.status {
+  cursor: pointer;
+  &__text {
+    display: none !important;
+    bottom: 16px;
+    color: white;
+    background-color: $black;
+    border-radius: $default_border_radius;
+    padding: 6px 10px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  &__circle {
+    min-height: 8px;
+    min-width: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $grey_additional_2;
+
+    &--PUBLISHED {
+      background-color: $green;
+    }
+
+    &--SCHEDULED {
+      background-color: #F1D334;
+    }
+  }
+
+  &:hover {
+    .status__text {
+      display: inline-block !important;
+    }
+  }
+}

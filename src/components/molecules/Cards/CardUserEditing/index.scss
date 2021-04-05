@@ -1,0 +1,34 @@
+@import "src/assets/scss/vars";
+
+.card-user-editing {
+  border-radius: $default_border_radius;
+  background: $white;
+
+  &__form {
+    width: 358px;
+
+    .form__button-wrapper {
+      .form__button {
+        right: -120px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__additional {
+    .card-user-editing__image {
+      max-height: 72px;
+      height: 72px;
+      width: 72px;
+      max-width: 72px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 0.5px solid $grey_additional_2;
+    }
+
+    .card-user-editing__image-input {
+      display: none;
+    }
+  }
+}

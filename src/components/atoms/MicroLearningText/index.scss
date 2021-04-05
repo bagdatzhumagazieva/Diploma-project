@@ -1,0 +1,25 @@
+// Micro Learning Text types with colors
+// Change names if micro learning types changes
+// current types: 'longread', 'audio-podcast', 'video', 'poll' = 'опрос', 'test'
+.micro-learning-text {
+  padding: 3px 16px !important;
+  border-radius: 36px;
+  background: #B3CDFF;
+
+  &--longread {
+    background: #FFB3B7;
+  }
+  &--audio-podcast {
+    background: #B3CDFF;
+  }
+  &--video {
+    background: #ACF8AA;
+  }
+  &--poll {
+    background: #D7AFF6;
+  }
+  &--quiz {
+    background: #F9F47B;
+  }
+}
+

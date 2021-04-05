@@ -1,0 +1,41 @@
+@import "src/assets/scss/vars";
+
+.battles-page {
+  &__main-content {
+    .battles-page__search-input {
+      width: 424px;
+    }
+    .battles-page__add-button {
+      height: fit-content;
+    }
+    .header--sortByStatus {
+      padding: 20px 14px!important;
+    }
+    .battle-column-status {
+      margin: -10px!important;
+    }
+
+    .battle-table {
+      .battle-table__image-wrapper {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        border-radius: 50%;
+        border: 0.5px solid $grey_additional_2;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .battle-table__user-name {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}

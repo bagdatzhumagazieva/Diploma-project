@@ -1,0 +1,57 @@
+@import 'src/assets/scss/vars';
+
+.modal-card-account {
+  background: $white;
+  box-shadow: 0 24px 48px rgba(37, 40, 59, 0.08);
+  border-radius: $default_border_radius;
+
+  .modal-card-account__add {
+    path {
+      stroke: $main_50;
+    }
+  }
+  .modal-card-account__user-data {
+    box-shadow: inset 0px -0.5px 0px #E0E0E5;
+    .user-data___arrow {
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 32px;
+
+      &--open {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  .modal-card-account__company {
+    padding-left: 80px;
+    padding-right: 20px;
+    margin-bottom: 2px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background-color: $grey_divider;
+    }
+
+    &--active {
+      background-color: $grey_outline;
+    }
+
+    .modal-card-account__company-image {
+      width: 36px;
+      height: 36px;
+      min-height: 36px;
+      border-radius: 50%;
+      border: 1px solid $grey_outline;
+      img { border-radius:  50% }
+    }
+  }
+
+  .modal-card-account__send-button {
+    padding: 16px 51px;
+    margin-left: 70px;
+    margin-right: 32px;
+  }
+}

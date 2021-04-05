@@ -1,0 +1,71 @@
+@import "src/assets/scss/vars";
+
+.course-creation-edition {
+  .line {
+    border: 1px solid $grey_outline;
+  }
+
+  .status-PUBLISHED {
+    .status-circle { background-color: $green; }
+  }
+
+  .status-DRAFT {
+    .status-circle { background-color: $red; }
+  }
+
+  .status-circle {
+    min-width: 8px;
+    width: 8px;
+    min-height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  .next-button {
+    padding: 16px 112px;
+  }
+
+  .course-creation-edition__sidebar {
+    width: 276px;
+  }
+
+  .course-creation-edition__content {
+    width: 876px;
+    &--preview {
+      overflow: auto;
+
+      .course-creation-edition__preview {
+        width: 1176px;
+      }
+    }
+
+    .course-detail {
+      width: 100%;
+      .main-info {
+        padding: 32px !important;
+        .main-info__left {
+          width: 100%;
+          margin-right: 32px;
+        }
+        .main-info__right {
+          .main-info__additional-info {
+            width: 100%;
+          }
+          .image-certificate {
+            width: 100%;
+            max-width: 278px;
+            height: 175px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.course-creation-edition--card-creation-edition {
+  .course-creation-edition__header,
+  .course-creation-edition__block {
+    display:  none !important;
+  }
+}

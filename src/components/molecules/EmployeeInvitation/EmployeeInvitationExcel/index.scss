@@ -1,0 +1,70 @@
+.employee-invitations-excel {
+  .employee-invitations-excel__header {
+    margin-right: 48px;
+
+    .header__column {
+      padding: 20px 24px;
+    }
+    .header__column--name {
+      flex: 4;
+    }
+    .header__column--phone {
+      flex: 3;
+    }
+    .header__column--branch {
+      flex: 3;
+    }
+    .header__column--groups {
+      flex: 2;
+    }
+  }
+
+  .employee-invitations-excel__group {
+    height: 336px;
+    overflow-y: auto;
+    .employee-invitations-excel__group__item-wrap {
+      border-top: 1px solid #E0E0E5;
+
+      .employee-invitations-excel__group__item {
+        width: calc(100% - 48px);
+
+        .column {
+          padding: 24px;
+        }
+
+        .column--name {
+          flex: 4;
+        }
+
+        .column--phone {
+          flex: 3;
+        }
+
+        .column--branch {
+          flex: 3;
+        }
+
+        .column--groups {
+          flex: 2;
+          .column--groups__names {
+            cursor: pointer;
+          }
+          .column--groups__hint {
+            .tippy-content {
+              padding: 6px 12px;
+            }
+          }
+        }
+      }
+
+      .employee-invitation-excel__delete-btn {
+        padding: 16px;
+        .employee-invitation-excel__delete-btn__icon {
+          cursor: pointer;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

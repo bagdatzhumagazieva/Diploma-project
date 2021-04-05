@@ -1,0 +1,31 @@
+@import 'src/assets/scss/vars';
+
+.breadcrumb-position {
+    margin-left: 72px;
+    margin-top: 50px;
+}
+
+.slider-comments-margin {
+    margin-right: 40px
+}
+
+.comments-theme {
+    background: white;
+    padding: 32px;
+    border-radius: $default_border_radius;
+}
+
+.client-card {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+
+    &-content{
+        width: 100%;
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between
+    }
+}

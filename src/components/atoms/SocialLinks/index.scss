@@ -1,0 +1,12 @@
+$social_links_items_margin_x: 16px;
+
+.social-links {
+  .social-links__items {
+    margin-left: $social_links_items_margin_x;
+    margin-right: $social_links_items_margin_x;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

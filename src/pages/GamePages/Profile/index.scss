@@ -1,0 +1,48 @@
+@import "src/assets/scss/vars";
+
+$profile_user_activity_tasks_width: 775px;
+$profile_card_certificate_item_width: 362px;
+$profile_card_user_editing_width: 700px;
+$profile_card_user_change_pass_width: 700px;
+$profile_card_user_achievements_width: 842px;
+$profile_card_user_achievements_margin_right: 66px;
+$profile_card_user_achievements_item_height: 268px;
+$profile_card_user_achievements_item_width: 242px;
+$profile_card_user_statistics_width: 209px;
+
+
+.profile {
+  .profile__content {
+    .profile__user-activity-tasks {
+      width: $profile_user_activity_tasks_width;
+    }
+
+    .profile__card-certificates {
+      .card-certificates__item {
+        width: $profile_card_certificate_item_width;
+      }
+    }
+
+    .profile__card-user-editing {
+      width: $profile_card_user_editing_width;
+    }
+
+    .profile__card-user-change-pass {
+      width: $profile_card_user_change_pass_width;
+    }
+
+    .profile__card-user-achievements {
+      width: $profile_card_user_achievements_width;
+      margin-right: $profile_card_user_achievements_margin_right;
+
+      .card-user-achievements__item {
+        height: $profile_card_user_achievements_item_height;
+        width: $profile_card_user_achievements_item_width;
+      }
+    }
+
+    .profile__card-user-statistics {
+      width: $profile_card_user_statistics_width;
+    }
+  }
+}

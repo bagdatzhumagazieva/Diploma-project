@@ -1,0 +1,43 @@
+@import "src/assets/scss/vars";
+
+.tasks-feed-page {
+  .tasks-feed-page__content {
+    background-color: $grey_background;
+
+    .tasks-feed-page__filters {
+      .filters__tasks-type {
+        .tasks-type__button {
+          background-color: $white;
+          border-radius: 32px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &--active, &:hover {
+            color: $main_50 !important;
+            background: $main_90;
+          }
+        }
+      }
+
+      .filters__static {
+        .static__select {
+          width: 154px;
+          .select__cur-option {
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+          }
+        }
+      }
+    }
+
+    .tasks-feed-page__micro-learning-group {
+      width: 776px;
+    }
+
+    .tasks-feed-page__sidebar {
+      width: 376px;
+    }
+  }
+}

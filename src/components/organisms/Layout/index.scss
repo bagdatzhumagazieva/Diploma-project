@@ -1,0 +1,65 @@
+@import "src/assets/scss/vars";
+
+$layout_width: 1440px;
+//identical to the sidebar collapsed width
+$layout_content_margin_left: 216px;
+$layout_content_width: calc(100% - 216px);
+$layout_header_left: 216px;
+$layout_header_width: calc(100% - 216px);
+
+// identical to the header height
+$layout_children_margin_top: 80px;
+
+// Layout minified
+// identical to the minified width of the sidebar
+$layout_minified_header_left: 72px;
+$layout_minified_header_width: calc(100% - 72px);
+
+
+.layout {
+  max-width: 100%;
+  margin: 0 auto;
+
+  &__content {
+    margin-left: $layout_content_margin_left;
+    width: $layout_content_width;
+
+    .layout__header {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      left: $layout_header_left;
+      width: $layout_header_width;
+    }
+    .layout__children {
+      margin-top: $layout_children_margin_top;
+      min-height: calc(100vh - 80px);
+    }
+  }
+}
+
+.layout--minified {
+  .layout__content {
+    margin: 0 auto!important;
+    width: 100%;
+  }
+
+  .layout__header {
+    left: $layout_minified_header_left;
+    width: $layout_minified_header_width;
+  }
+
+}
+
+@media screen and (max-width: $medium_breakpoint_width) {
+  .layout {
+    &__content {
+      margin-left: 0;
+      width: 100%;
+
+      .layout__header {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

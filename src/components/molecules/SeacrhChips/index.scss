@@ -1,0 +1,73 @@
+@import "src/assets/scss/vars";
+
+.search-chips {
+  .search-chips__content {
+    background: $white;
+    border: 1px solid $grey_outline;
+    box-sizing: border-box;
+    border-radius: 5px;
+    min-height: 43px;
+
+    .search-chips__cur-values {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 24px;
+      border: 1px solid $grey_outline;
+      border-radius: 24px;
+      .cur-values__delete {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .search-chips__input {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 24px;
+      font-size: 16px;
+      line-height: 19px;
+      color: $black;
+      width: auto;
+      min-width: 20px;
+    }
+  }
+
+  .search-chips__results {
+    max-height: 170px;
+    z-index: 2;
+    overflow-y: auto;
+    background-color: $white;
+    border: 1px solid $grey_outline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    border-radius: $default_border_radius;
+
+    .results__item {
+      &:hover {
+        background-color: $grey_divider;
+      }
+      &--disable {
+        background-color: $grey_divider;
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &--disable {
+    .search-chips__content {
+      background: $grey_divider;
+      cursor: not-allowed;
+      .search-chips__input {
+        display: none;
+      }
+      .search-chips__cur-values {
+        color: $grey_placeholder;
+        span {
+          margin-right: 0 !important;
+        }
+        .cur-values__delete {
+          display: none;
+        }
+      }
+    }
+  }
+}

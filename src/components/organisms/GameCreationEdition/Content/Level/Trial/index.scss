@@ -1,0 +1,30 @@
+@import "src/assets/scss/vars";
+
+.trial {
+  background: #F2F3F6;
+  border: 1px solid $grey_placeholder;
+  border-radius: $default_border_radius;
+
+  &:first-child {
+    margin-top: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .trial__header {
+    .header__title {
+      .title__icon {
+        display: none;
+      }
+
+      &:hover {
+        .title__icon {
+          display: block;
+        }
+      }
+    }
+  }
+
+}

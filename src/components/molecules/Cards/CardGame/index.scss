@@ -1,0 +1,101 @@
+@import "src/assets/scss/vars";
+
+$card_game_image_wrapper_height: 164px;
+$card_game_favorite_image_position: 8px;
+$card_game_title_min_height: 38px;
+$card_game_progress_border_radius: 4px;
+$card_game_progress_height: 4px;
+
+.card-game {
+  background: $white;
+  border-radius: $default_border_radius;
+
+  .card-game__image-wrapper {
+    height: $card_game_image_wrapper_height;
+    max-height: $card_game_image_wrapper_height;
+    border-radius: $default_border_radius;
+    border: 1px solid $grey_additional_2;
+
+    .card-game__image {
+      border-radius: $default_border_radius - 1;
+    }
+
+    .card-game__button {
+      z-index: 5;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.0;
+    }
+
+    .card-game__favorite-image {
+      z-index: 5;
+      right: $card_game_favorite_image_position;
+      top: $card_game_favorite_image_position;
+      opacity: 0.0;
+    }
+
+    .card-game__image-overlay {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      background: $black;
+      border-radius: $default_border_radius - 1;
+    }
+
+    .card-game__clock-icon path{
+      stroke: white;
+    }
+
+    &:hover {
+      .card-game__button,
+      .card-game__favorite-image {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.5s ease;
+        opacity: 1.0;
+      }
+      .card-game__image-overlay {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.5s ease;
+        opacity: .45;
+      }
+    }
+  }
+
+  .card-game__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: left;
+    min-height: 38px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .card-game__progress {
+    background: $main_90;
+    border-radius: $card_game_progress_border_radius;
+    min-height: $card_game_progress_height;
+
+    .progress__value {
+      background: $main_50;
+      min-height: $card_game_progress_height;
+      border-radius: $card_game_progress_border_radius;
+      &--completed {
+        background: $green;
+      }
+    }
+  }
+
+  .card-game__icon-certificate {
+    top: 2px;
+    left: 0;
+    transform: rotate(-10deg);
+  }
+}

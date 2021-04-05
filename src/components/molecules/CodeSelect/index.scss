@@ -1,0 +1,153 @@
+@import "src/assets/scss/vars";
+
+$code_select_cur_option_padding_left: 16px;
+$code_select_cur_option_padding_right: 8px;
+$cur_option_img_width: 24px;
+$cur_option_img_height: 16px;
+$cur_option_img_margin_right: 8px;
+$code_select_input_wrapper: 80%;
+$code_select_options_padding_top: 5px;
+$code_select_options_max_height: 172px;
+$code_select_options_top: 44px;
+$code_select_options_left: 0;
+$options_item_padding_y: 3px;
+$options_item_padding_x: 16px;
+$options_item_padding_margin_bottom: 4px;
+$options_img_width: 16px;
+$options_img_margin_right: 16px;
+
+.code-select {
+  background: $white;
+
+  .code-select__content {
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+
+    .code-select__cur-option {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      padding-left: $code_select_cur_option_padding_left;
+      padding-right: $code_select_cur_option_padding_right;
+      background: rgba(224, 231, 255, 0.2);
+      border-right: 1px solid $grey_outline;
+
+      .cur-option__img {
+        width: $cur_option_img_width;
+        height: $cur_option_img_height;
+        margin-right: $cur_option_img_margin_right;
+
+      }
+
+    }
+    .code-select__input-wrapper {
+      width: $code_select_input_wrapper;
+      .input-field__input {
+        border: none;
+      }
+    }
+  }
+
+  .code-select__options {
+    overflow-y: auto;
+    display: none;
+    height: auto;
+    top: $code_select_options_top;
+    left: $code_select_options_left;
+    max-height: $code_select_options_max_height;
+    padding-top: $code_select_options_padding_top;
+    background: $white;
+    cursor: pointer;
+    border: 1px solid $grey_outline;
+    border-top: 0;
+    border-radius: 0 0 $default_border_radius $default_border_radius;
+
+    .options__item {
+      display: flex;
+      align-items: center;
+      padding: $options_item_padding_y $options_item_padding_x;
+      margin-bottom: $options_item_padding_margin_bottom;
+
+      &:hover {
+        background-color: $grey_divider;
+      }
+
+      .options__img {
+        width: $options_img_width;
+        height: auto;
+        margin-right: $options_img_margin_right;
+      }
+    }
+  }
+
+  // code select error state
+  &--error {
+    .code-select__content {
+      border: 1px solid $red;
+      .code-select__cur-option {
+        border-right: 1px solid $red;
+      }
+    }
+  }
+
+  // code select focus state
+  &--focus {
+    .code-select__content {
+      border: 1px solid $main_50;
+      .code-select__cur-option {
+        border-right: 1px solid $main_50;
+      }
+    }
+  }
+
+  // code select hover state
+  &--hover {
+    .code-select__content {
+      border: 1px solid $grey_additional_1;
+      .code-select__cur-option {
+        border-right: 1px solid $grey_additional_1;
+      }
+    }
+  }
+
+  // code select when options open state
+  &--options {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: -4.4px;
+      border-left: 1px solid #E0E0E6;
+      height: 8px;
+      border-radius: 50%;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+
+    .code-select__content {
+      .code-select__cur-option {
+        border: 1px solid $main_50;
+        border-radius: $default_border_radius 0 0 $default_border_radius;
+        margin: -1px;
+        margin-right: 0;
+      }
+    }
+    .code-select__options {
+      display: block;
+    }
+  }
+
+  // code select disabled state
+  &--disabled {
+    .code-select__content {
+      border: 1px solid $grey_outline;
+      background: $grey_divider;
+    }
+    .code-select__cur-option {
+      border-right: 1px solid $grey_outline;
+    }
+  }
+}

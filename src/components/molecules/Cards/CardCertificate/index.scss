@@ -1,0 +1,32 @@
+@import "src/assets/scss/vars";
+
+$card_certificate_game_image_size: 48px;
+$card_certificate_game_name_height: 19px; // identical to the line height
+
+.card-certificate {
+  height: auto;
+  border-radius: $default_border_radius;
+  background: $white;
+
+  .card-certificate__content {
+    .card-certificate__game {
+      .game__name {
+        cursor: pointer;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 2 * $card_certificate_game_name_height;
+      }
+
+      .game__image {
+        width: $card_certificate_game_image_size;
+        min-width: $card_certificate_game_image_size;
+        height: $card_certificate_game_image_size;
+        border: 1px solid $grey_additional_2;
+        border-radius: $default_border_radius;
+      }
+    }
+  }
+}

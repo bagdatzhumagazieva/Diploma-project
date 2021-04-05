@@ -1,0 +1,48 @@
+@import "src/assets/scss/vars";
+
+.search-card {
+  border: 1px solid $grey_outline;
+  border-radius: 5px;
+
+  .search-card__image {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+  }
+
+  .search-card__content {
+    background-color: $white;
+    z-index: 3;
+    position: fixed;
+    width: 928px;
+    border: 1px solid $grey_outline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    border-radius: $default_border_radius;
+
+    .search-card__input {
+      .input-field__content {
+        padding-left: 16px;
+      }
+    }
+
+    .search-card__options {
+      max-height: 200px;
+      overflow-y: scroll;
+
+      .options__item {
+        &--active {
+          background-color: $grey_outline;
+        }
+        &:hover {
+          background-color: $grey_divider;
+        }
+
+        .item__image {
+          width: 36px;
+          height: 36px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "src/assets/scss/vars";
+
+$dot_width: 12px;
+$line_width: 1.5px;
+$title_lh: 19px;
+
+.stepper {
+  .stepper__step {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .stepper__dot {
+      width: $dot_width;
+      height: $dot_width;
+      background: $grey_placeholder;
+      border-radius: 50%;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 1.5px;
+        height: calc(100% + 20px);
+        left: calc(#{$dot_width} / 2 - #{$line_width} / 2);
+        top: calc(#{$title_lh} - #{$title_lh - $dot_width} / 2);
+        background: $grey_placeholder;
+      }
+    }
+
+    .stepper__title {
+      margin-left: 20px;
+      color: $grey_placeholder;
+    }
+  }
+
+  .stepper__step--passed {
+    .stepper__dot {
+      background: $main_50;
+      &:after {
+        background: $main_50;
+      }
+    }
+    .stepper__title {
+      color: $black;
+    }
+  }
+
+  .stepper__step--active {
+    .stepper__dot {
+      background: $main_50;
+    }
+    .stepper__title {
+      color: $main_50;
+    }
+  }
+
+  .stepper__step:last-child {
+    .stepper__dot {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

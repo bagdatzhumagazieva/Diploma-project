@@ -1,0 +1,39 @@
+@import "src/assets/scss/vars";
+
+.quiz {
+  background-color: $white;
+  border-radius: 6px;
+  min-width: 100%;
+  min-height: 400px;
+  &__question {
+    border: 1px solid $grey_outline;
+    border-radius: 6px;
+    &-error {
+      border-color: $red;
+    }
+  }
+  &__question-video {
+    &--detailed-arrow {
+      display: block;
+      height: 10px;
+      width: 10px;
+      fill: $main_55;
+      background: url("../../../../assets/img/icons/arrow-bottom-orange.svg") center center no-repeat;
+      &-rotate {
+        transform: rotate(180deg);
+        transition: 0.3s ease-in-out;
+      }
+    }
+    &--hidden {
+      height: 0;
+      visibility: hidden;
+    }
+    &--visible {
+      visibility: visible;
+      height: 100%;
+    }
+  }
+  &__button {
+    width: 230px;
+  }
+}

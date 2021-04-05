@@ -1,0 +1,67 @@
+@import "src/assets/scss/vars";
+
+.card-account {
+  max-height: 500px;
+  width: 300px;
+  background-color: $white;
+  border: 1px solid $grey_outline;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  border-radius: $default_border_radius;
+
+  .card-account__header {
+    border-bottom: 1px solid $grey_divider;
+    .card-account__user-image {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      border: 1px solid $grey_outline;
+      border-radius: 50%;
+    }
+  }
+  .card-account__company-block {
+    overflow: auto;
+    overflow-x: hidden;
+    .card-account__company {
+      border: none;
+      color: $black;
+      cursor: pointer;
+      &:hover {
+        background-color: $grey_divider;
+      }
+      &:active {
+        background-color: $grey_outline;
+      }
+      .company__notifications {
+        padding: 1px 6px;
+        background: $main_50;
+        border-radius: 12px;
+        top: -6px;
+        right: -8px;
+
+        &--medium {
+          right: -12px;
+        }
+        &--large {
+          right: -16px;
+        }
+
+      }
+
+      .company__image-wrapper {
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        border: 1px solid $grey_outline;
+        border-radius: 50%;
+        .company__image {
+          border-radius: 50%;
+        }
+
+      }
+
+      &--active {
+        background: $grey_outline;
+      }
+    }
+  }
+}

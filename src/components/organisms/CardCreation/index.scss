@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.card-creation {
+  background: $grey_background;
+  .card-creation__stepper {
+    flex: 1;
+    margin-right: 24px;
+  }
+
+  .card-creation__content {
+    flex: 3;
+  }
+
+  .card-creation__next-btn {
+    width: 276px;
+  }
+}
+
+.modal-card-creation {
+  overflow-y: auto;
+  .card-creation {
+    width: $grid_width;
+    margin: 32px auto;
+    .card-creation__cancel-icon {
+      top: 0;
+      right: -84px;
+    }
+  }
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: $grey_background;
+}

@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.card-company-choice {
+  background-color: $white;
+  border-radius: $default_border_radius;
+  border: 1px solid $grey_outline;
+  padding: 13px 24px 13px 30px;
+
+  .card-company-choice__image {
+    width: 48px;
+    min-width: 48px;
+    border: 1px solid $white;
+    border-radius: 5px;
+  }
+
+  .card-company-choice___arrow {
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+    transform: rotate(-90deg);
+  }
+
+}
+
+.group-card-company-choice {
+  .group-card-company-choice__item {
+    margin-top: 56px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "src/assets/scss/vars";
+
+.micro-learning {
+  background: $white;
+  border-radius: $default_border_radius;
+
+  &__image-wrapper {
+    cursor: pointer;
+    width: 202px;
+    height: 176px;
+    min-width: 202px;
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+    overflow: hidden;
+
+    .micro-learning__image {
+      border-radius: $default_border_radius - 1;
+      object-fit: cover;
+    }
+
+    .micro-learning__favorite-image {
+      right: 8px;
+      top: 8px;
+      opacity: 0.0;
+      z-index: 2;
+    }
+
+    .micro-learning__image-overlay {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      background: $black;
+    }
+
+    .micro-learning__finished-status {
+      left: 0;
+      top: 0;
+      width: 56px;
+      height: 56px;
+      background-color: $green;
+    }
+
+    .micro-learning__image-overlay--black {
+      opacity: .4;
+    }
+
+    .micro-learning__play-image {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      border-color: rgba($grey_outline, .55);
+      .micro-learning__favorite-image {
+        transition: all 0.3s ease;
+        opacity: 1;
+      }
+      .micro-learning__image-overlay {
+        opacity: .55;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    .micro-learning__title {
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .micro-learning__description {
+      color: $grey_additional_2;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .micro-learning__bottom {
+      .micro-learning__badge {
+        min-width: 84px;
+      }
+
+      .micro-learning__coin {
+        .coin__image {
+          min-width: 14px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

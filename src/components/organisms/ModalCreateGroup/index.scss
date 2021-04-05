@@ -1,0 +1,47 @@
+@import "src/assets/scss/vars";
+
+.modal-create-group {
+  .modal-create-group__header {
+    background: $grey_background;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
+  .modal-create-group__tabs {
+    background: $main_90;
+
+    .tabs__button {
+      background: $main_90;
+      color: $main_60;
+      border-radius: $default_border_radius $default_border_radius 0 0;
+
+      &:hover, &:active, &:focus, &--active {
+        background: $white;
+        color: $black;
+      }
+
+      &:first-of-type {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .modal-create-group__manual {
+    .modal-create-group__manual__footer {
+      border-top: 1px solid $grey_outline;
+      padding: 24px;
+    }
+
+    .multiple-create-group__send-btn {
+      padding: 16px 42px;
+    }
+  }
+
+  .parametric-group-error-modal {
+    padding: 24px 32px;
+    .parametric-group-error-modal__close-btn {
+      padding: 16px 50px;
+      margin-top: 24px;
+    }
+  }
+}

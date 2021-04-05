@@ -1,0 +1,22 @@
+@import "src/assets/scss/vars";
+
+.my-courses {
+  &__header {
+    .my-courses__filter {
+      min-width: 154px;
+    }
+  }
+
+  .my-courses__content {
+    background-color: $grey_background;
+
+    .my-courses__card {
+      width: 376px;
+      margin-right: 24px;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+  }
+}

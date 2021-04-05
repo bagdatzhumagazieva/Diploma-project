@@ -1,0 +1,19 @@
+@import "src/assets/scss/vars";
+
+.pen-icon {
+  path {
+    stroke: #282F4A;
+  }
+
+  &:hover {
+    path {
+      stroke: $main_50;
+    }
+  }
+
+  &--active {
+    path {
+      stroke: $main_50;
+    }
+  }
+}

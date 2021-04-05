@@ -1,0 +1,32 @@
+@import "src/assets/scss/vars.scss";
+
+$card_padding_y: 64px;
+$card_padding_x: 96px;
+$card_box_shadow_top: 0;
+$card_box_shadow_x: 24px;
+$card_box_shadow_bottom: 48px;
+$card_border_radius: 6px;
+$card_back_link_left: 32px;
+$card_back_link_top: 24px;
+
+
+.card {
+  padding: $card_padding_y $card_padding_x;
+  background: $white;
+  border-radius: $card_border_radius;
+  &--box-shadow {
+    box-shadow: $card_box_shadow_top $card_box_shadow_x $card_box_shadow_bottom rgba(37, 40, 59, 0.08);
+  }
+
+  .card__back-link {
+    left: $card_back_link_left;
+    top: $card_back_link_top;
+  }
+}
+
+.card-detail{
+  padding: 24px 32px;
+  width: 476px;
+  height: 195px;
+ 
+}

@@ -1,0 +1,29 @@
+@import "src/assets/scss/vars";
+
+.shop-detail {
+
+  &__card-wrap {
+    width: 476px;
+
+    .shop-detail__card {
+      width: 100%;
+      border-radius: $default_border_radius;
+      background-color: $white;
+
+      .line {
+        border: 1px solid $grey_outline;
+      }
+
+      &__favorite {
+        width: 14px;
+        height: 14px;
+        &:hover {
+          border-color: rgba($grey_outline, .55);
+          transition: all 0.3s ease;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}

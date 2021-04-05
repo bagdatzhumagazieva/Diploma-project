@@ -1,0 +1,80 @@
+@import "src/assets/scss/vars";
+
+$star_size: 26px;
+$star_size_small: 20px;
+
+.rate {
+  .star {
+    .star__icon-wrap {
+      overflow: hidden;
+
+      .star__icon {
+        width: $star_size;
+        height: $star_size;
+      }
+
+      .star__icon--first {
+        margin-right: -$star_size / 2;
+      }
+
+      .star__icon--second {
+        margin-left: -$star_size / 2;
+      }
+
+      .star__icon--grey path {
+        stroke: $grey_outline;
+        fill: $grey_outline;
+      }
+    }
+
+    .star__icon-wrap_small {
+      overflow: hidden;
+
+      .star__icon {
+        width: $star_size_small;
+        height: $star_size_small;
+      }
+
+      .star__icon--first {
+        margin-right: -$star_size_small / 2;
+      }
+
+      .star__icon--second {
+        margin-left: -$star_size_small / 2;
+      }
+
+      .star__icon--grey path {
+        stroke: $grey_outline;
+        fill: $grey_outline;
+      }
+    }
+
+    .star__radio {
+      display: none;
+    }
+  }
+
+  .star:nth-child(even) {
+    .star__icon-wrap, .star__icon-wrap_small {
+      padding-right: 4px;
+    }
+  }
+
+  .star:nth-child(odd) {
+    .star__icon-wrap {
+      padding-left: 4px;
+    }
+  }
+
+  .star:first-of-type {
+    .star__icon-wrap {
+      padding-left: 0;
+    }
+  }
+
+  .star:last-of-type {
+    .star__icon-wrap {
+      padding-right: 0;
+    }
+  }
+}

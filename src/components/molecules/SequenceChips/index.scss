@@ -1,0 +1,63 @@
+@import "src/assets/scss/vars";
+
+.sequence-chips {
+  position: relative;
+  .sequence-chips__content {
+    border: 1px solid $grey_outline;
+    border-radius: 5px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    max-height: 200px;
+    padding: 6px 16px;
+
+    .sequence-chips__drop-placeholder {
+      background: $main_90;
+    }
+
+    .sequence-chips__input-wrap {
+      flex: 1;
+      margin: 5px 0;
+      .sequence-chips__input {
+        .input-field__content {
+          .input-field__input {
+            padding: 0;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .sequence-chips__edit-input-wrap {
+      margin: 5px 0;
+      .sequence-chips__edit-input {
+        .input-field__content {
+          border: none;
+          .input-field__input {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .sequence-chips__chip {
+      cursor: grab;
+      align-self: center;
+      padding: 4px 8px;
+      border: 1px solid $grey_outline;
+      border-radius: 24px;
+      margin: 5px 8px 5px 0;
+      .sequence-chips__chip__delete {
+        width: 16px;
+        height: 16px;
+        &:hover {
+          path {
+            stroke: $red;
+          }
+        }
+      }
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}

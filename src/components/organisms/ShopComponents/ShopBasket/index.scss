@@ -1,0 +1,45 @@
+@import "src/assets/scss/vars";
+
+.shop-basket {
+
+  &__card {
+    width: 776px;
+  }
+
+  &__pay-card {
+    width: 376px;
+    height: fit-content;
+    background: $white;
+    border-radius: $default_border_radius;
+
+    .icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  .shop-basket__modal-card-wrap {
+    max-height: 648px;
+    overflow: auto;
+  }
+
+  &__modal-card {
+    border-radius: $default_border_radius;
+    border: 1px solid $grey_additional_2;
+    background: $grey_background;
+
+    &__img {
+      width: 48px;
+      height: 48px;
+      border-radius: $default_border_radius;
+    }
+  }
+
+  &__modal-card-button {
+    width: 100%;
+  }
+}

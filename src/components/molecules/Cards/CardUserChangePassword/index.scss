@@ -1,0 +1,22 @@
+@import "src/assets/scss/vars";
+
+$user_change_pss_form_width: 358px;
+$user_change_pass_form_button_right: -120px;
+$user_change_pass_form_button_top: 50%;
+
+.user-change-pass {
+  border-radius: $default_border_radius;
+  background: $white;
+
+  &__form {
+    width: $user_change_pss_form_width;
+
+    .form__button-wrapper {
+      .form__button {
+        right: $user_change_pass_form_button_right;
+        top: $user_change_pass_form_button_top;
+        transform: translateY(-$user_change_pass_form_button_top);
+      }
+    }
+  }
+}

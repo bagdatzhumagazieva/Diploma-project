@@ -1,0 +1,50 @@
+@import "src/assets/scss/vars";
+
+.dashboard-page {
+  .dashboard-page__header {
+    .header__banner {
+      height: 156px;
+      border-radius: $default_border_radius;
+    }
+  }
+  .dashboard-page__content {
+    background: $grey_background;
+
+    .content__left {
+      width: 776px;
+
+      .section-education {
+        .section-education__item {
+          width: 376px;
+        }
+      }
+
+      .dashboard-page__card-information {
+        width: 376px;
+      }
+    }
+
+    .content__right {
+      width: 376px;
+
+      .dashboard-page__banner {
+        height: 441px;
+      }
+
+      .dashboard-page__card-news-group {
+        border-radius: $default_border_radius;
+        background: $white;
+
+        .card-news-group__item:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    .section-card-advertisement {
+      .section-card-advertisement__item {
+        width: 376px;
+      }
+    }
+  }
+}

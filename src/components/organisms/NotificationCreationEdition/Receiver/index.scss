@@ -1,0 +1,15 @@
+@import "src/assets/scss/vars";
+
+.notification-receiver {
+  &__info {
+    width: 876px;
+    background-color: $white;
+
+    &__select {
+      width: 358px;
+    }
+  }
+    &__searcher-input {
+      width: 608px;
+    }
+}

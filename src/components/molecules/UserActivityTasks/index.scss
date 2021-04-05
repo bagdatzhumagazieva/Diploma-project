@@ -1,0 +1,66 @@
+@import "src/assets/scss/vars";
+
+$tasks_with_types_padding_y: 3px;
+$tasks_with_types_padding_x: 16px;
+$tasks_with_types_border_radius: 8px;
+$tasks_with_types_status_options_button_width: 176px;
+$tasks_with_types_status_options_button_width_middle: 222px;
+
+// User activity tasks styles
+.user-activity-tasks {
+  &__status-options {
+    align-self: flex-start;
+    background: $main_90;
+    border-radius: $tasks_with_types_border_radius $tasks_with_types_border_radius 0 0;
+
+    .status-options__button {
+      width: $tasks_with_types_status_options_button_width;
+      background: $main_90;
+      color: $main_60;
+      border-radius: $tasks_with_types_border_radius $tasks_with_types_border_radius 0 0;
+
+      &--middle {
+        width: $tasks_with_types_status_options_button_width_middle;
+      }
+
+      &:hover, &:active, &:focus, &--active {
+        background: $white;
+        color: $black;
+      }
+
+      &--active {
+        font-weight: $medium_weight;
+      }
+
+    }
+  }
+
+  &__tasks-with-types {
+    animation-name: tasks-with-types-animation;
+    animation-duration: 0.5s;
+  }
+}
+
+// Tasks with types styles
+.tasks-with-types {
+  background: $white;
+  &__button {
+    color: $grey_additional_2;
+    background: $grey_divider;
+    padding: $tasks_with_types_padding_y $tasks_with_types_padding_x;
+
+    &--active, &:hover, &:focus {
+      color: $main_50;
+      background: $main_90;
+    }
+  }
+  &__show-all {
+    color: $grey_additional_1;
+    cursor: pointer;
+  }
+}
+
+@keyframes tasks-with-types-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

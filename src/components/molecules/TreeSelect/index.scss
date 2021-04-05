@@ -1,0 +1,116 @@
+@import 'src/assets/scss/vars.scss';
+
+.tree-select {
+  .select__cur-option {
+    cursor: pointer;
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+    white-space: nowrap;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    &--error {
+      border: 1px solid $red;
+    }
+
+    &:hover {
+      border-color: $grey_additional_1;
+      z-index: 2;
+    }
+
+    &--active, &--active:hover {
+      border-color: $main_50;
+      z-index: 2;
+    }
+
+    &--active {
+      .select-arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--error {
+      border-color: $red;
+    }
+
+    .cur-option__arrow {
+      right: 0;
+    }
+  }
+
+  .select__options {
+    z-index: 3;
+    display: none;
+    overflow-y: auto;
+    overflow-x: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid $grey_outline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    background: $white;
+    border-radius: $default_border_radius;
+    .options__item {
+      cursor: pointer;
+      margin-top: 5.5px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &--active {
+        background-color: $grey_outline;
+      }
+      &--disabled > .options__node {
+        cursor: not-allowed;
+        opacity: .4;
+      }
+      .item__children-block {
+        margin-top: 5.5px;
+      }
+      .options__item__name {
+        min-width: 250px;
+        padding: 1px 0;
+        &:hover {
+          background-color: $grey_divider;
+        }
+        &--active {
+          background-color: $grey_outline;
+        }
+        &--disable {
+          cursor: not-allowed;
+          opacity: .4;
+        }
+      }
+      .options__item__arrow {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        transition: .15s ease-in;
+      }
+      .options__item__arrow--open {
+        transform: rotate(90deg);
+        transition: .15s ease-in;
+      }
+      .options__item__space {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .options__node {
+      &--disable {
+        cursor: not-allowed;
+        opacity: .4;
+      }
+    }
+  }
+
+  .select-arrow {
+    &--up {
+      transform: rotate(-180deg);
+      transition: .15s ease-in;
+    }
+    &--down {
+      transition: .15s ease-in;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import 'src/assets/scss/vars';
+
+.card-prize {
+  position: relative;
+  border: 1px solid $grey_outline;
+  border-radius: $default_border_radius;
+  background: $white;
+
+    &__img {
+      width: 328px;
+      height: 224px;
+      border: 0.5px solid $grey_additional_2;
+      border-radius: $default_border_radius;
+    }
+
+  &__title {
+    height: 62px;
+    max-height: 62px;
+  }
+
+    &__rating {
+      position: absolute;
+      width: 68px;
+      height: 32px;
+      left: 40px;
+      top: 200px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      z-index: 3;
+  }
+
+  .coins__image {
+    width: 12px;
+    height: 12px;
+  }
+
+}

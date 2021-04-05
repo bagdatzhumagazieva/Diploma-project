@@ -1,0 +1,25 @@
+@import 'src/assets/scss/vars';
+
+$card_user_achievement_image_size: 96px;
+$card_user_achievement_box_shadow: 0 4px 32px;
+$card_user_achievement_coins_image_size: 14px;
+
+.card-user-achievement {
+  border-radius: $default_border_radius;
+  background: $white;
+  box-shadow: $card_user_achievement_box_shadow rgba(151, 151, 151, 0.12);
+
+  .card-user-achievement__image {
+    min-height: $card_user_achievement_image_size;
+    min-width: $card_user_achievement_image_size;
+    width: $card_user_achievement_image_size;
+  }
+
+  .card-user-achievement__coins {
+    .coins__image {
+      min-height: $card_user_achievement_coins_image_size;
+      width: $card_user_achievement_coins_image_size;
+      min-width: $card_user_achievement_coins_image_size;
+    }
+  }
+}

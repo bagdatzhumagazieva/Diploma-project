@@ -1,0 +1,10 @@
+@import "src/assets/scss/vars";
+
+.action-icon {
+  &--red {
+    path {stroke: $red;}
+  }
+  &--yellow {
+    path {stroke: $main_50;}
+  }
+}

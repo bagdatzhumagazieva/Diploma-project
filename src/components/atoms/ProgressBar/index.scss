@@ -1,0 +1,26 @@
+@import "src/assets/scss/vars";
+$progress-height: 4px;
+$progress-border-radius: 2px;
+$start: #FF5C00;
+$middle: #F6C76B;
+
+.progress {
+  .progress-container {
+    height: $progress-height;
+    background: $grey_outline;
+    border-radius: $progress-height;
+    .bar {
+      height: $progress-height;
+      border-radius: $progress-border-radius;
+    }
+  }
+}
+.progress--end {
+  background: $green;
+}
+.progress--middle {
+  background: $middle;
+}
+.progress--start {
+  background: $start;
+}

@@ -1,0 +1,108 @@
+@import "src/assets/scss/vars";
+
+$card_content_width: 600px;
+
+.card-preview {
+  padding: 32px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  background: $white;
+
+  .card-preview__fav-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.open-question-preview {
+  width: $card_content_width;
+  margin: 0 auto;
+  .open-question-preview__answer {
+    width: 472px;
+  }
+}
+
+.one-of-list-preview {
+  width: $card_content_width;
+  margin: 0 auto;
+  .one-of-list-preview__radio {
+    margin-left: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.image-from-list-preview {
+  width: $card_content_width;
+  margin: 0 auto;
+  .image-from-list-preview__image-list {
+    max-width: 450px;
+    .image-from-list-preview__image {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: $default_border_radius;
+      border: 1px solid $grey_additional_2;
+    }
+  }
+}
+
+.few-from-list-preview {
+  width: $card_content_width;
+  margin: 0 auto;
+  .few-from-list-preview__checkbox {
+    margin-left: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.question-photo-tag-preview {
+  width: $card_content_width;
+  margin: 0 auto;
+  .question-photo-tag-preview__image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+.sequence-from-list {
+  width: $card_content_width;
+  margin: 0 auto;
+
+  .sequence-from-list__chip {
+    cursor: grab;
+    padding: 6px 20px;
+    color: $grey_additional_2;
+    border: 1px solid $grey_outline;
+    border-radius: 32px;
+    margin: 8px;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .sequence-from-list__droppable {
+    padding: 6px 16px;
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+
+    .sequence-from-list__droppable__content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      min-height: 46px;
+    }
+
+    .sequence-from-list__droppable__chip {
+      background: $main_90;
+      color: $main_50;
+      border-color: $main_90;
+    }
+  }
+
+  .sequence-from-list__drop-placeholder {
+    background: $main_90;
+    color: $main_50;
+    border-color: $main_50;
+  }
+}

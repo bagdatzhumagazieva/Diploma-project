@@ -1,0 +1,67 @@
+@import "src/assets/scss/vars";
+
+.photo-tag {
+  .photo-tag__image-wrap {
+    position: relative;
+
+    .photo-tag__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .photo-tag__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $main_50;
+    cursor: pointer;
+
+    &--selected {
+      background: rgba(255, 152, 0, 0.4);
+    }
+  }
+
+  .photo-tag__prompt {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 32px;
+    width: 100%;
+  }
+
+  .photo-tag__actions {
+    width: 600px;
+    margin-top: 20px;
+
+    .photo-tag__add-btn {
+      width: auto;
+      height: auto;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .photo-tag__delete-btn {
+      color: $grey_additional_1;
+
+      .photo-tag__delete-icon {
+        width: 16px;
+        height: 16px;
+        path {
+          stroke: $grey_additional_1;
+        }
+      }
+
+      &--disabled {
+        color: $grey_additional_2;
+        .photo-tag__delete-icon {
+          path {
+            stroke: $grey_additional_2;
+          }
+        }
+      }
+    }
+  }
+}

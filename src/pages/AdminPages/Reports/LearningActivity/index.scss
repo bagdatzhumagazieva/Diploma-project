@@ -1,0 +1,18 @@
+.learning-activity {
+  background: white;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 6px;
+  .activity-date {
+    display: inline;
+    padding: 8px 12px;
+    border-radius: 0;
+    color: #282F4A;
+    border: 1px solid #E0E0E6;
+    &--active {
+      color: #FF9800;
+      border-color: #FF9800;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import 'src/assets/scss/vars';
+
+.card-branch {
+  width: 270px;
+  height: 66px;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  border-radius: $default_border_radius;
+  background: $white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+
+  &:hover {
+    background: $white;
+    .card-branch__name {
+      color: $main_50;
+    }
+  }
+
+  .card-branch__percent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 4px 8px;
+    border-radius: 6px 0;
+  }
+}

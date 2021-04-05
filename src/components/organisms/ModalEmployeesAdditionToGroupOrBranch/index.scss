@@ -1,0 +1,69 @@
+@import "src/assets/scss/vars";
+
+.modal__title {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+.employees-add-to-group-branch {
+  .employees-add-to-group-branch__header {
+    .employees-add-to-group-branch__input-searcher {
+      width: 608px;
+    }
+
+    .employees-add-to-group-branch__filters {
+      .filters__item {
+        width: 288px;
+        .filters__select {
+          width: 288px;
+        }
+      }
+    }
+
+    .employees-add-to-group-branch__line {
+      opacity: 0.2;
+      height: 1px;
+      border: 1px solid #B0BAC9;
+      width: 100%;
+    }
+  }
+
+  .employees-add-to-group-branch__content {
+    .employees-add-to-group-branch__table {
+      max-height: 488px;
+      height: 488px;
+      overflow: auto;
+      .table-wrapper .table {
+        margin-top: 0 !important;
+      }
+      .table__content {
+        background: #F4F5F9;
+        box-shadow: inset 0px -0.5px 0px #E0E0E5;
+      }
+    }
+  }
+
+  .employees-add-to-group-branch__bottom {
+    height: 90px;
+  }
+}
+
+
+@media screen and (max-height: 900px) {
+  .employees-add-to-group-branch {
+    .employees-add-to-group-branch__content {
+      .employees-add-to-group-branch__table {
+        max-height: 400px;
+        height: 400px;
+      }
+    }
+
+    &--filters {
+      .employees-add-to-group-branch__content {
+        .employees-add-to-group-branch__table {
+          max-height: 320px;
+          height: 320px;
+        }
+      }
+    }
+  }
+}

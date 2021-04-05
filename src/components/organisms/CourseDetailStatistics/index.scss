@@ -1,0 +1,36 @@
+@import "src/assets/scss/vars";
+
+.course-statistics {
+  background-color: $white;
+  width: 100%;
+  &__white {
+    color: #000000;
+  }
+  &__groups {
+    width: 50%;
+    padding-bottom: 110px;
+  }
+
+  &__users {
+    width: 50%;
+
+    &__progress {
+      .users__progress__employees {
+        width: 85px;
+      }
+      .users__progress__statistic {
+        width: 130px;
+      }
+    }
+  }
+
+  &__middle-point {
+    border-top: 1px solid $grey_outline;
+    width: 702px;
+
+    &__table {
+      border: 1px solid $grey_outline;
+      border-radius: $default_border_radius;
+    }
+  }
+}

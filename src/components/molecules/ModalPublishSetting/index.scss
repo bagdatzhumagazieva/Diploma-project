@@ -1,0 +1,22 @@
+@import "src/assets/scss/vars";
+
+$modal_button_width: 170px;
+
+.modal-publish-setting {
+  .modal-publish-setting__btn {
+    width: $modal_button_width;
+    min-width: $modal_button_width;
+    padding: 16px;
+  }
+
+  .modal-publish-setting__clock {
+    width: 116px;
+  }
+
+  &__icon {
+    width: 38px;
+    path {
+      stroke: $black;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "src/assets/scss/vars";
+
+.auth-page__btn {
+  color: $black;
+
+  &:hover {
+    color: $main_60;
+  }
+}

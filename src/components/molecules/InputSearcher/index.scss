@@ -1,0 +1,48 @@
+@import "src/assets/scss/vars";
+
+.searcher {
+  &__input-wrapper {
+    padding: 11px 16px;
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius $default_border_radius;
+    margin-left: -1px;
+
+    &:hover {
+      border-color: $grey_additional_1;
+    }
+  }
+
+  &__input {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__result {
+    display: none;
+    background: white;
+    border: 1px solid $grey_outline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    border-radius: $default_border_radius;
+    max-height: 296px;
+    overflow-y: auto;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+.searcher--focus {
+  .searcher__input-wrapper {
+    border-color: $main_50;
+    z-index: 2;
+  }
+}
+
+.searcher--active {
+  .searcher__result {
+    display: block;
+  }
+}

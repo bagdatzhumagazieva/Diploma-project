@@ -1,0 +1,22 @@
+.content-games {
+  &__table {
+    .table__image-wrapper {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+
+      img {
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+
+    .table__coin {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  &__input-searcher{
+    width: 376px;
+  }
+}

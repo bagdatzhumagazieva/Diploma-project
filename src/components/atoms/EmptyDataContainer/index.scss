@@ -1,0 +1,8 @@
+@import "src/assets/scss/vars";
+
+.empty-data-container {
+  height: 460px;
+  width: 100%;
+  background: $white;
+  border-radius: $default_border_radius;
+}

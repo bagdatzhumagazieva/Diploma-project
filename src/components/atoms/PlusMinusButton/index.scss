@@ -1,0 +1,24 @@
+@import "src/assets/scss/vars";
+
+.plus-minus-button {
+
+  .icon {
+    border-radius: 31px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+
+    .plus-minus-button__minus {
+      width: 13px;
+      background-color: $black;
+      border: 0.5px solid $black;
+      border-radius: 120px;
+    }
+
+    .plus-minus-button__plus {
+      path {
+        stroke: $main_50;
+      }
+    }
+  }
+}

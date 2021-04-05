@@ -1,0 +1,19 @@
+@import "src/assets/scss/vars";
+
+.branch-page {
+  .branch-info {
+    .branch-info__btn {
+      padding: 12px 22px;
+    }
+  }
+
+  .branch-page__content {
+    background: $grey_background;
+  }
+
+  .branch-delete-info__img {
+    cursor: pointer;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+}

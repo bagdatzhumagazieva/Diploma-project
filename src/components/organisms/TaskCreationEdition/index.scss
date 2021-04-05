@@ -1,0 +1,49 @@
+@import "src/assets/scss/vars";
+
+.task-creation {
+  background: $grey_background;
+
+  .task-creation__body {
+    width: $grid_width;
+    margin: 0 auto;
+
+    .task-creation__body-content {
+      margin: 0 auto;
+    }
+
+    &__sidebar {
+      width: 276px;
+      &__btn {
+        width: 100%;
+      }
+    }
+
+    &__preview {
+      width: 876px;
+      background-color: $white;
+    }
+  }
+}
+
+.task-creation__info {
+  width: 876px;
+  background-color: $white;
+  border-radius: $default_border_radius;
+  &__select {
+    width: 358px;
+  }
+
+  &__border {
+    border-bottom: 1px solid #E0E0E6;
+  }
+
+  &__add-img {
+    width: 272px;
+  }
+}
+.task-creation__info__input {
+  width: 470px;
+}
+.next-button {
+  padding: 16px 112px;
+}

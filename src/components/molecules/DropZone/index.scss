@@ -1,0 +1,40 @@
+@import "src/assets/scss/vars";
+
+.drop-zone {
+  .drop-zone__content {
+    border: 2px dashed #E0E0E6;
+    background-color: $blue_additional_2;
+    border-radius: $default_border_radius;
+
+    .drop-zone__input {
+      display: none;
+    }
+
+    .drop-zone__image {
+      max-width: 100%;
+    }
+    &--hover {
+      border: 2px solid $main_50;
+    }
+  }
+
+  // loading part
+  .drop-zone__loading {
+    background-color: $blue_additional_2;
+    border-radius: $default_border_radius;
+  }
+
+  // error part
+  .drop-zone__error-block {
+    background: #FCDADA;
+    border-radius: $default_border_radius;
+
+    .drop-zone__error-block-inner {
+      max-width: 400px;
+    }
+
+    .drop-zone__error-image {
+      max-width: 100%;
+    }
+  }
+}

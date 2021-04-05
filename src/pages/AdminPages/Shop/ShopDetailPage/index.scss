@@ -1,0 +1,64 @@
+@import "src/assets/scss/vars";
+
+.shop-detail {
+
+  .shop-detail__icon {
+    &--yellow {
+      path {stroke: $main_50;}
+    }
+    &--red {
+      path {stroke: $red;}
+    }
+  }
+
+  &__card-wrap {
+    width: 476px;
+
+    .shop-detail__card {
+      width: 100%;
+      border-radius: $default_border_radius;
+      background-color: $white;
+
+      .line {
+        border: 1px solid $grey_outline;
+      }
+
+      &__favorite {
+        width: 14px;
+        height: 14px;
+        &:hover {
+          border-color: rgba($grey_outline, .55);
+          transition: all 0.3s ease;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__tabs {
+    background: $main_90;
+    width: fit-content;
+    border-radius: $default_border_radius $default_border_radius 0 0;
+
+    .tabs__button {
+      height: 100%;
+      background: $main_90;
+      color: $main_60;
+      border-radius: $default_border_radius $default_border_radius 0 0;
+
+      &:hover, &:active, &:focus, &--active {
+        background: $white;
+        color: $black;
+      }
+
+      &:first-of-type {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__tab-body {
+    width: 100%;
+    background-color: $white;
+  }
+}

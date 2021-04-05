@@ -1,0 +1,13 @@
+.company-groups {
+  .company-groups__input-searcher {
+    width: 424px;
+  }
+  .company-groups__add-btn {
+    &:hover {
+      .company-groups__add-btn__icon {
+        transform: rotate(-90deg);
+        transition: .15s ease-in-out;
+      }
+    }
+  }
+}

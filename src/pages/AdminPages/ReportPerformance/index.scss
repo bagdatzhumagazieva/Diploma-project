@@ -1,0 +1,26 @@
+.report-card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.performance-type {
+  padding: 8px 20px;
+  border-radius: 32px;
+  color: #B0BAC9;
+  background: white;
+  border: 1px solid #E0E0E6;;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+  &--active {
+    color: #FF9800;
+    background: #FFEACC;
+    border-color: #FFEACC;
+  }
+  &:focus {
+    background: #FFEACC;
+  }
+}
+
+.performance-keyword {
+  width: 424px;
+}

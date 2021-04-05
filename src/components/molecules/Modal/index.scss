@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.modal {
+  top: 0;
+  left: 0;
+  z-index: 15;
+  background: rgba(0, 0, 0, 0.45);
+  overflow-y: hidden;
+
+  &__content {
+    background: $white;
+    border-radius: $default_border_radius;
+    overflow: overlay;
+    max-height: calc(100% - 64px);
+
+    .modal__children {
+      height: 100%;
+    }
+
+    .modal__title {
+      margin: 26px 32px 32px 32px;
+    }
+
+    .modal__close-button {
+      z-index: 3;
+    }
+
+    .modal__btn {
+      min-width: 170px;
+      padding: 16px;
+    }
+  }
+}

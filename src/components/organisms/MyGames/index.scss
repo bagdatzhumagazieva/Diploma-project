@@ -1,0 +1,58 @@
+@import "src/assets/scss/vars";
+
+$my_games_page_card_education_width: 376px;
+$my_games_page_filter_dynamic_button_border_radius: 32px;
+$my_games_page_filter_dynamic_showed_content_height: 42px;
+$my_games_page_filter_dynamic_all_hide_content_margin_top: 9px;
+$my_games_page_filter_static_select_width: 154px;
+$my_games_page_card_game_width: 276px;
+
+.my-games {
+  &__content {
+    .my-games__card-education {
+      width: $my_games_page_card_education_width;
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+
+    .my-games__filter {
+      .filter__dynamic {
+        .dynamic__button {
+          background: $white;
+          border-radius: $my_games_page_filter_dynamic_button_border_radius;
+
+          &--active, &:hover {
+            color: $main_50 !important;
+            background: $main_90;
+          }
+        }
+        .dynamic__showed-content {
+          height: $my_games_page_filter_dynamic_showed_content_height;
+          min-height: $my_games_page_filter_dynamic_showed_content_height;
+        }
+
+        &--all {
+          .dynamic__hide-content {
+            margin-top: $my_games_page_filter_dynamic_all_hide_content_margin_top;
+            display: block !important;
+          }
+        }
+      }
+
+      .filter__static {
+        .static__select {
+          width: $my_games_page_filter_static_select_width;
+        }
+      }
+    }
+
+    .my-games__card-game {
+      width: $my_games_page_card_game_width;
+      &:nth-child(4n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+

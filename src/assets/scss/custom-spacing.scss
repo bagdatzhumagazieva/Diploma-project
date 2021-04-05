@@ -1,0 +1,123 @@
+$use-bootstrap: false;
+
+// margin and padding values array
+$space-values : (
+        0,
+        2,
+        4,
+        8,
+        10,
+        12,
+        14,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        42,
+        44,
+        48,
+        52,
+        60,
+        64,
+) !default;
+
+// margin and padding shorthands
+$space-prefixes : (
+        p  : padding,
+        pt : padding-top,
+        pr : padding-right,
+        pb : padding-bottom,
+        pl : padding-left,
+        m  : margin,
+        mt : margin-top,
+        mr : margin-right,
+        mb : margin-bottom,
+        ml : margin-left,
+  // Top and bottom - padding and margin
+        my : margin,
+        py : padding,
+  // Right and left - padding and margin
+        mx : margin,
+        px : padding
+) !default;
+
+// change these values if its not imported into bootstrap
+$grid-breakpoints-custom: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 480px,
+  // Medium screen / tablet
+        md: 768px,
+  // Large screen / desktop
+        lg: 960px,
+  // Extra large screen / wide desktop
+        xl: 1350px
+) !default;
+
+$breakpoints : $grid-breakpoints-custom;
+@if $use-bootstrap {
+  $breakpoints : $grid-breakpoints;
+}
+
+// main function definition
+@mixin make-space($values, $prefixes, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // without media queries
+    @if($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $prefixes {
+        @each $value in $values {
+          @if($attr-short == 'my' or $attr-short == 'py') {
+            .#{$attr-short}-#{$value} {
+              #{$attr-long}-top: #{$value}#{'px!important'};
+              #{$attr-long}-bottom: #{$value}#{'px!important'};
+            }
+          }
+          @else if($attr-short == 'mx' or $attr-short == 'px') {
+            .#{$attr-short}-#{$value} {
+              #{$attr-long}-right: #{$value}#{'px!important'};
+              #{$attr-long}-left: #{$value}#{'px!important'};
+            }
+          }
+          @else {
+            .#{$attr-short}-#{$value} {
+              #{$attr-long}: #{$value}#{'px!important'};
+            }
+          }
+        }
+      }
+    }
+      // with media queries
+    @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @each $attr-short, $attr-long in $prefixes {
+          @each $value in $values {
+            @if($attr-short == 'my' or $attr-short == 'py') {
+              .#{$attr-short}-#{$breakpoint-name}-#{$value} {
+                #{$attr-long}-top: #{$value}#{'px!important'};
+                #{$attr-long}-bottom: #{$value}#{'px!important'};
+              }
+            }
+            @else if($attr-short == 'mx' or $attr-short == 'px') {
+              .#{$attr-short}-#{$breakpoint-name}-#{$value} {
+                #{$attr-long}-right: #{$value}#{'px!important'};
+                #{$attr-long}-left: #{$value}#{'px!important'};
+              }
+            }
+            @else {
+              .#{$attr-short}-#{$breakpoint-name}-#{$value} {
+                #{$attr-long}: #{$value}#{'px!important'};
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@include make-space($space-values, $space-prefixes, $breakpoints);

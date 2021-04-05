@@ -1,0 +1,58 @@
+@import "src/assets/scss/vars";
+
+.filter-tags__button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  .button__image {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.filter-tags-modal {
+  height: 400px;
+  max-height: 800px;
+  .filter-tags__alphabet {
+    .alphabet__char {
+      color: $main_85;
+
+      &--active, &:hover{
+        color: $main_50;
+      }
+    }
+  }
+
+  .filter-tags__content {
+    overflow-y: auto;
+    .checkbox {
+      height: 60px;
+      width: 33%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 48px;
+
+      .checkmark {
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+      }
+
+      .checkbox__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+    }
+  }
+
+  .filter-tags-modal__submit-button {
+    padding: 16px 56px;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .filter-tags-modal {
+    height: 700px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "src/assets/scss/vars";
+
+.chart-progress {
+
+  &__circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  &__title-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+}

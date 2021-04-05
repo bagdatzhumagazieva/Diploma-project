@@ -1,0 +1,24 @@
+.card-news {
+  background: #fff;
+  .card-news__image {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .card-news__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-news__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

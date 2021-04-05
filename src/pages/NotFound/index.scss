@@ -1,0 +1,119 @@
+@import "src/assets/scss/vars.scss";
+
+@mixin setCircleColor($isFillCircle) {
+  @each $color-name, $color-value in $interface-colors {
+    .not-found__color-#{$color-name} & {
+      @if $isFillCircle {
+        background-color: $color-value;
+      } @else {
+        border: 15px solid $color-value;
+      }
+    }
+  }
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  &__content {
+    z-index: 1;
+  }
+}
+.link-button {
+  width: 300px;
+  @include setCircleColor(true);
+  border-radius: 6px;
+}
+
+.circles {
+  .fill-circle {
+    @include setCircleColor(true);
+  }
+
+  .bordered-circle {
+    @include setCircleColor(false);
+  }
+
+  &__left-bottom {
+    position: fixed;
+    left: -50px;
+    bottom: -50px;
+    width: 291px;
+    height: 291px;
+    border-radius: 150px;
+    opacity: 0.8;
+  }
+
+  &__right {
+    position: fixed;
+    top: 100px;
+    right: 350px;
+    width: 220px;
+    height: 220px;
+    border-radius: 150px;
+    opacity: 0.8;
+  }
+
+  &__top-right {
+    position: fixed;
+    top: -150px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
+    border-radius: 160px;
+    opacity: 0.4;
+  }
+
+  &__top {
+    position: fixed;
+    top: -120px;
+    left: 600px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    opacity: 0.7;
+  }
+
+  &__top-left {
+    position: fixed;
+    top: -600px;
+    left: -200px;
+    width: 738px;
+    height: 738px;
+    border-radius: 360px;
+    opacity: 0.4;
+  }
+
+  &__bottom-right {
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+    width: 326px;
+    height: 326px;
+    border-radius: 160px;
+    opacity: 0.4;
+  }
+
+  &__bottom {
+    position: fixed;
+    width: 520px;
+    height: 520px;
+    border-radius: 260px;
+    left: 461px;
+    bottom: -350px;
+    opacity: 0.1;
+  }
+
+  &__left {
+    position: fixed;
+    width: 388px;
+    height: 388px;
+    border-radius: 190px;
+    left: 220px;
+    top: 150px;
+    opacity: 0.1;
+  }
+}

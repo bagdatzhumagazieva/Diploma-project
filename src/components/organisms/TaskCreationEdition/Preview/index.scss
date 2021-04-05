@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.task-preview {
+  background-color: $white;
+  width: 100%;
+
+  .task-preview__body {
+    background-color: $white;
+
+    &__img {
+      width: 648px;
+    }
+
+    &__descr {
+      border-left: 4px solid $black;
+    }
+
+    &__questn {
+      border: 1px solid $grey_outline;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+      border-radius: $default_border_radius;
+    }
+
+    .comments__line {
+      height: 1px;
+      border-top: 1px solid $grey_outline;
+    }
+
+    .comments__textarea {
+      width: 100%;
+    }
+  }
+}

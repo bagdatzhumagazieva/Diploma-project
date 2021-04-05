@@ -1,0 +1,52 @@
+@import "src/assets/scss/vars";
+
+$text_sms_field_padding_y: 16px;
+$text_sms_field_padding_x: 44px;
+$text_sms_field_letter_spacing: 6px;
+$text_sms_field_border_radius: 6px;
+
+.input-text-sms {
+  padding: $text_sms_field_padding_y $text_sms_field_padding_x;
+  font-size: $text_size;
+  line-height: $text_med_lh;
+  font-weight: $regular_weight;
+  border: 1px solid $grey_outline;
+  letter-spacing: $text_sms_field_letter_spacing;
+  background: $white;
+  border-radius: $text_sms_field_border_radius;
+  caret-color: $main_50;
+  text-align: center;
+
+  &:hover {
+    border-color: $grey_additional_1;
+  }
+
+  &-webkit-input-placeholder,
+  &-ms-input-placeholder,
+  &::placeholder {
+    color: $grey_placeholder;
+    letter-spacing: 1px;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    border-color: $main_50;
+  }
+
+  &--error {
+    border-color: $red;
+  }
+}
+
+.input-text-sms--error {
+  border-color: $red;
+}
+
+.input-text-sms__error-label {
+  white-space: nowrap;
+}

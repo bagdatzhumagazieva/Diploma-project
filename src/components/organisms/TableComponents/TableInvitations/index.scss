@@ -1,0 +1,30 @@
+@import "src/assets/scss/vars";
+
+.invitations-search-input {
+  width: 376px;
+}
+
+.invitations-table {
+  .invitation__status--expired {
+    color: $red;
+  }
+  .invitation__status--pending {
+    color: $grey_additional_2;
+  }
+  .invitation__status--accepted {
+    color: $green;
+  }
+
+
+  .invitations-table__group-names {
+    cursor: pointer;
+    &:hover {
+      color: $main_50;
+    }
+  }
+  .invitations-table__group-hint {
+    .tippy-content {
+      padding: 6px 12px;
+    }
+  }
+}

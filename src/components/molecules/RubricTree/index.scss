@@ -1,0 +1,44 @@
+@import "src/assets/scss/vars";
+
+.rubric-tree {
+  .rubric-tree__button {
+    background: transparent;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $grey_additional_3;
+    }
+
+    &--active {
+      background: $main_85;
+    }
+  }
+
+  .rubric-tree__content {
+    .rubric-tree__subrubric {
+      margin-left: 18px;
+
+      .subrubric__data {
+        margin-left: 32px;
+        display: none;
+      }
+
+      // Subrubric active
+      &--active {
+        .subrubric__button {
+          background: $grey_additional_3;
+        }
+
+        .subrubric__data {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

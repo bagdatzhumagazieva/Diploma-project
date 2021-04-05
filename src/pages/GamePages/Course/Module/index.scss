@@ -1,0 +1,38 @@
+@import "src/assets/scss/vars";
+
+.module-page {
+  .module-page__header {
+    .module-page__filter {
+      .select__cur-option {
+        min-width: 154px;
+      }
+      .select__options {
+        right: 0;
+        width: 205px !important;
+      }
+    }
+  }
+
+  .module-page__content {
+    .module-data {
+      background-color: $white;
+      border-radius: $default_border_radius;
+
+      .module-data__description {
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      .module-data__image {
+        min-height: 408px;
+        height: 408px;
+        border-radius: $default_border_radius;
+        border: 1px solid $grey_additional_2;
+      }
+    }
+
+    .module-page__block-left {
+      width: 776px;
+    }
+  }
+}

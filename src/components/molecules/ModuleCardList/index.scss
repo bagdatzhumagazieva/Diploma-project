@@ -1,0 +1,37 @@
+@import 'src/assets/scss/vars';
+
+.module-card-list {
+  height: fit-content;
+  width: 376px;
+  background-color: $white;
+  border-radius: $default_border_radius;
+
+  .module-card-list__cards--disable {
+    pointer-events: none;
+    opacity: .45;
+  }
+  .module-card-list__item {
+    cursor: pointer;
+
+    &--NOT_STARTED {
+      color: $grey_additional_2;
+      cursor: not-allowed;
+    }
+    &--IN_PROGRESS {
+      color: $main_50;
+      a {
+        color: $main_50;
+      }
+    }
+
+    &--current {
+      background-color: $grey_divider;
+    }
+
+    .lock-icon--grey {
+      path {
+        stroke: $grey_additional_2;
+      }
+    }
+  }
+}

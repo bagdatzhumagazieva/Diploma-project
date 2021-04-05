@@ -1,0 +1,135 @@
+@import "src/assets/scss/vars";
+
+$company_demo_width: 1440;
+$company_demo_height: 1024;
+$company_demo_logo_top: 24;
+$company_demo_logo_left: 24;
+$company_demo_banner_top: 105;
+$company_demo_banner_left: 240;
+
+.company-settings-page {
+  &__content {
+    .settings {
+      flex: 3;
+      margin-right: 24px;
+
+      .settings-card {
+        .settings__logo {
+          width: 96px;
+          height: 96px;
+          object-fit: cover;
+          border: 1px solid $grey_outline;
+          border-radius: $default_border_radius;
+        }
+
+        .settings__banner {
+          width: auto;
+          height: 96px;
+          object-fit: cover;
+          border-radius: $default_border_radius;
+        }
+      }
+
+      .settings__divider {
+        border-bottom: 1px solid $grey_outline;
+        margin: 48px 0;
+      }
+
+      .settings__info {
+        width: 534px;
+        .settings__info__language, .settings__info__color {
+          width: calc(50% - 12px);
+        }
+      }
+
+      .company__demo {
+        width: 100%;
+        border-radius: $default_border_radius;
+
+        .company__demo__image {
+          width: 100%;
+          border: 1px solid $grey_outline;
+          border-radius: $default_border_radius;
+        }
+
+        .company__demo__logo {
+          position: absolute;
+          width: percentage(32 / $company_demo_width);
+          height: percentage(32 / $company_demo_height);
+          left: percentage($company_demo_logo_left / $company_demo_width);
+          top: percentage($company_demo_logo_top / $company_demo_height);
+        }
+
+        .company__demo__banner {
+          position: absolute;
+          border-radius: $default_border_radius;
+          width: percentage(1176 / $company_demo_width);
+          height: percentage(156 / $company_demo_height);
+          left: percentage($company_demo_banner_left / $company_demo_width);
+          top: percentage($company_demo_banner_top / $company_demo_height);
+        }
+      }
+    }
+
+    .admins {
+      flex: 1;
+      &__list {
+        background: $white;
+        &-options {
+          cursor: pointer;
+          border-bottom: 1px solid $grey_additional_3;
+          &:last-child {
+            border: none;
+          }
+          &__img {
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+.user-edit-modal {
+  &__main-info {
+    background: $grey_background;
+    border-radius: 8px;
+    border: 1px solid $grey_outline;
+    &--img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+}
+
+@mixin companyColorMaker() {
+  $color: (
+    'green': $company_color_green,
+    'blue': $company_color_blue,
+    'violet': $company_color_violet,
+    'red': $company_color_red,
+    'orange': $company_color_orange,
+    'yellow': $company_color_yellow,
+    'turquoise': $company_color_turquoise,
+    'indigo': $company_color_indigo,
+    'electric-violet': $company_color_electric_violet,
+    'rose': $company_color_rose,
+    'tundora': $company_color_tundora,
+  );
+
+  @each $i in $color {
+    .company-color--#{nth($i, 1)} {
+      background: nth($i, 2);
+    }
+  }
+}
+
+.company-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+@include companyColorMaker();

@@ -1,0 +1,17 @@
+@import "src/assets/scss/vars";
+
+.general-information {
+  .general-information__content {
+    background: $white;
+    border-radius: $default_border_radius;
+    .general-information__input {
+      width: 470px;
+    }
+    .general-information__groups {
+      width: 358px;
+    }
+    .general-information__search-chips {
+      width: 358px;
+    }
+  }
+}

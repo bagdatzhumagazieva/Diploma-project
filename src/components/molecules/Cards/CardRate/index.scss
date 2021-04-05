@@ -1,0 +1,47 @@
+@import "src/assets/scss/vars";
+
+.card-rate {
+  border: 1px solid $grey_outline;
+  border-radius: $default_border_radius;
+  background: $white;
+  width: 330px;
+
+  .rate {
+    position: relative;
+    height: auto;
+  }
+
+  .rate:not(:checked) > input {
+    display: none;
+  }
+
+  .rate:not(:checked) > label {
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 25px;
+    color: $grey_outline
+  }
+
+  .rate:not(:checked) > label:before {
+    content: '\2605';
+  }
+
+  .rate > input:checked ~ label {
+    color: #FFDA2D;
+  }
+
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #FFCE0B;
+  }
+
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #FFCE0B;
+  }
+}

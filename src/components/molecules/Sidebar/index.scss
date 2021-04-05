@@ -1,0 +1,54 @@
+@import "src/assets/scss/vars";
+
+.sidebar {
+  width: 216px;
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  border-right: 1px solid rgba($grey_additional_2, 0.2);
+  background: $white;
+
+  .sidebar__header {
+    height: 80px;
+    min-height: 80px;
+  }
+
+  .header__logo {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+  }
+  .header__arrow-img-wrapper {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: $grey_divider;
+    border-radius: 36px;
+
+    .header__arrow-img {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      transition: .15s ease-in;
+
+      &--minified {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &--minified {
+    width: 72px;
+  }
+}
+
+@media screen and (max-width: $medium_breakpoint_width) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar--min-window {
+    display: flex;
+  }
+}

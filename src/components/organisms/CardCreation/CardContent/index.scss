@@ -1,0 +1,14 @@
+@import "src/assets/scss/vars";
+
+$time_width: 358px;
+
+.card-content {
+  padding: 32px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  background: $white;
+
+  .card-content__time {
+    width: $time_width;
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/assets/scss/vars";
+
+$select_width: 358px;
+
+.card-verification-question {
+  padding: 32px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  background: $white;
+
+  .card-verification-question__type {
+    width: $select_width;
+  }
+
+  .image-from-list {
+    .image-from-list__preview-list {
+      max-width: 450px;
+      .image-from-list__preview {
+        .image-from-list__preview__image {
+          width: 160px;
+          height: 160px;
+          object-fit: cover;
+          border-radius: $default_border_radius;
+          border: 1px solid $grey_additional_2;
+        }
+      }
+    }
+  }
+
+  .question-photo-tag {
+    .question-photo-tag__content {
+      position: relative;
+      width: 600px;
+      margin: 0 auto;
+
+      .question-photo-tag__content__remove-btn {
+        position: absolute;
+        top: -14px;
+        right: -54px;
+      }
+    }
+  }
+}

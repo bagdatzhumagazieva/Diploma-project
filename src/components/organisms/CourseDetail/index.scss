@@ -1,0 +1,56 @@
+@import "src/assets/scss/vars";
+
+.course-detail {
+  width: 1176px;
+  margin: 0 auto;
+
+  &__header {
+    position: relative;
+    height: 500px;
+    border-radius: 10px;
+    .header__bg {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .header__body {
+      position: absolute;
+      top: 50%;
+      margin-left: 96px;
+      margin-right: 96px;
+      transform: translateY(-50%);
+      width: calc(100% - 96 * 2);
+      .course-detail__clock-icon path {
+        stroke: white;
+      }
+    }
+
+    .header__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .header__button {
+      margin-top: 82px;
+      padding: 16px 88px;
+    }
+
+    .header__overlay {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      min-width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background: rgba($black, 0.7);
+    }
+  }
+
+  &__main-info--web {
+    border-radius: $default_border_radius;
+  }
+}

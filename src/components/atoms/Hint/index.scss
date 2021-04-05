@@ -1,0 +1,70 @@
+@import "src/assets/scss/vars";
+
+$tippy_tooltip_box_shadow: 0 4px 8px;
+
+.tippy-tooltip {
+  border-radius: $default_border_radius;
+  background: $white;
+  box-shadow: $tippy_tooltip_box_shadow rgba(0, 0, 0, 0.08);
+  border: 1px solid $grey_outline;
+}
+
+.tippy-tooltip[data-placement^=top] .tippy-arrow {
+  border-width: 5px;
+  border-top-color: $grey_outline;
+  bottom: -10px;
+  &:after {
+    content: '';
+    position: absolute;
+    border-width: 4px;
+    border-color: $white transparent transparent transparent;
+    border-style: solid;
+    top: -5px;
+    left: -4px;
+  }
+}
+
+.tippy-tooltip[data-placement^=right] .tippy-arrow {
+  border-width: 5px;
+  border-right-color: $grey_outline;
+  left: -10px;
+  &:after {
+    content: '';
+    position: absolute;
+    border-width: 4px;
+    border-color: transparent $white transparent transparent;
+    border-style: solid;
+    right: -5px;
+    bottom: -4px;
+  }
+}
+
+.tippy-tooltip[data-placement^=bottom] .tippy-arrow {
+  border-width: 5px;
+  border-bottom-color: $grey_outline;
+  top: -10px;
+  &:after {
+    content: '';
+    position: absolute;
+    border-width: 4px;
+    border-color: transparent transparent $white transparent;
+    border-style: solid;
+    bottom: -5px;
+    left: -4px;
+  }
+}
+
+.tippy-tooltip[data-placement^=left] .tippy-arrow {
+  border-width: 5px;
+  border-left-color: $grey_outline;
+  right: -10px;
+  &:after {
+    content: '';
+    position: absolute;
+    border-width: 4px;
+    border-color: transparent transparent transparent $white;
+    border-style: solid;
+    left: -5px;
+    top: -4px;
+  }
+}

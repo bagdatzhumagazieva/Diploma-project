@@ -1,0 +1,70 @@
+@import "src/assets/scss/vars";
+
+.card-category {
+  .card-category__image {
+    max-width: 100%;
+  }
+
+  .card-category__arrow {
+    right: 80px;
+    top: 50%;
+    path { stroke: $grey_additional_2; }
+  }
+
+  .card-category__options {
+    .options__dots {
+      cursor: pointer;
+      height: 24px;
+      justify-content: space-evenly;
+
+      .dots__item {
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        border: 2px solid $grey_additional_2;
+      }
+
+      &--active {
+        .dots__item {
+          border-color: $black;
+        }
+      }
+    }
+    .options__select {
+      background: $white;
+      width: 248px;
+      z-index: 3;
+      border: 1px solid $grey_outline;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 6px;
+      right: -2px;
+      .select__item:hover {
+        background-color: $grey_divider;
+      }
+    }
+  }
+
+  // Active state
+  &--active {
+    background-color: $main_85;
+    .card-category__arrow {
+      path { stroke: $black; }
+    }
+  }
+
+  //Hover state
+  &:hover {
+    background-color: $grey_additional_3;
+
+    .card-category__arrow {
+      path { stroke: $black; }
+    }
+    .card-category__options {
+      .options__dots:hover {
+        .dots__item {
+          border-color: $black;
+        }
+      }
+    }
+  }
+}

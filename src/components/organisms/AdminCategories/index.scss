@@ -1,0 +1,25 @@
+@import "src/assets/scss/vars";
+
+.admin-categories {
+  width: 1176px;
+  margin: 0 auto;
+  .admin-categories__block {
+    height: 555px;
+    max-height: 555px;
+    background: $white;
+    border-radius: $default_border_radius;
+    .block__item {
+      width: calc(100% / 3);
+      border-right: 1px solid $grey_outline;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      .item__content {
+        overflow-y: auto;
+        border-top: 1px solid $grey_outline;
+      }
+    }
+  }
+}

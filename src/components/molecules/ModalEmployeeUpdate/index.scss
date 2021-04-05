@@ -1,0 +1,33 @@
+@import "src/assets/scss/vars";
+
+.modal-employee-update {
+  width: 648px;
+  .modal-employee-update__card {
+    background: $grey_background;
+    border-radius: 8px;
+
+    .modal-employee-update__image-wrapper {
+      width: 72px;
+      min-width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 1px solid $grey_additional_2;
+      .modal-employee-update__image {
+        object-fit: cover;
+        border-radius: calc(50% - 1px);
+      }
+    }
+  }
+  .modal-employee-update__block {
+    .block__item {
+      width: 280px;
+
+      .radio-button {
+        .radio-button__title {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$content_width: 548px;
+$content_card_height: 524px;
+
+.registration-page {
+  background-color: #2F80ED;
+  background-position: center;
+  background-size: cover;
+
+  .registration-page__content {
+    width: $content_width;
+
+    .content__card {
+      height: $content_card_height;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.report-card {
+  background: white;
+  border-radius: 6px;
+
+  .report-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #E5E5E5;
+    .report-card__type {
+      padding: 3px 16px;
+      border-radius: 36px;
+      background: #E9E9ED;
+    }
+  }
+
+  .report-card__content {
+    display: flex;
+    padding: 16px 24px;
+    .report-card__img {
+      width: 52px;
+      height: 52px;
+      border-radius: 4px;
+    }
+    .report-card__content__info {
+      margin-left: 16px;
+    }
+  }
+
+  .report-card__footer {
+    display: flex;
+    padding: 16px 24px;
+    .report-card__download {
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      border: 1px solid #E0E0E6;
+      cursor: pointer;
+      padding: 12px 24px;
+      height: 52px;
+      .excel-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .excel-text {
+        color: #282F4A;
+        margin-left: 8px;
+      }
+    }
+    .report-card__percentage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      min-width: 52px;
+      padding: 16px 12px;
+      border-radius: 6px;
+      margin-left: 16px;
+    }
+  }
+}
+
+.report-card--wide {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  width: 100%;
+  .report-card--wide__header {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .report-card--wide__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 8px;
+  }
+  .report-card--wide__percentage {
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    margin-left: auto;
+  }
+  .report-card--wide__download {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E6;
+    height: 52px;
+    min-width: 52px;
+    padding: 14px;
+    .excel-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .report-card--wide__footer {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "src/assets/scss/vars";
+
+.card-creation-page {
+  background: $grey_background;
+
+  .card-creation {
+    width: $grid_width;
+    margin: 32px auto;
+    padding-top: 32px;
+  }
+}

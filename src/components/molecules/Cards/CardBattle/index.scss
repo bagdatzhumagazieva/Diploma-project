@@ -1,0 +1,29 @@
+@import "src/assets/scss/vars";
+
+.card-battle {
+  background: $white;
+
+  .card-battle__content {
+    .card-battle__image {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .card-battle__button {
+    padding: 4px 10px;
+  }
+}
+
+.card-battle-group {
+  background: $white;
+  border-radius: $default_border_radius;
+
+  .card-battle-group__item:last-child {
+    margin-bottom: 20px !important;
+  }
+}
+

@@ -1,0 +1,50 @@
+.report-zeal__search {
+  width: 424px;
+}
+
+.report-zeal__groups {
+  width: 288px;
+  margin-right: 32px;
+}
+
+.report-zeal__branch {
+  width: 288px;
+  margin-bottom: 18px;
+  .select__cur-option {
+    background: white;
+  }
+}
+
+.report-zeal__employees {
+  .employees-table__user-img-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    .employees-table__user-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.report-zeal__download {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #E0E0E6;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-left: auto;
+  padding: 12px 24px;
+  height: 52px;
+  .excel-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .excel-text {
+    color: #282F4A;
+    margin-left: 8px;
+  }
+}

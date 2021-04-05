@@ -1,0 +1,8 @@
+.knowledge-base-page {
+  .user-cards {
+    min-height: 100vh;
+  }
+  &.layout--minified .layout__content {
+    padding-left: 72px;
+  }
+}

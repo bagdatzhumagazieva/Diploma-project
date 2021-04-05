@@ -1,0 +1,20 @@
+@import "src/assets/scss/vars.scss";
+
+.company-info {
+  z-index: 2;
+  background: $white;
+
+  .company-info__settings {
+    padding: 16px 44px;
+  }
+
+  .company-info__content {
+    margin-top: 50px;
+
+    .company-info__logo {
+      width: 48px;
+      height: 48px;
+      margin-right: 24px;
+    }
+  }
+}

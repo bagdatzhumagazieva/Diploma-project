@@ -1,0 +1,36 @@
+@import "src/assets/scss/vars";
+
+.shop-creation-edition {
+  &__btn {
+    width: 276px;
+  }
+
+  &__select {
+    width: 358px;
+  }
+
+  &__gen-info {
+    width: 876px;
+    background-color: $white;
+
+    .line {
+      border: 1px solid $grey_outline;
+    }
+  }
+
+  &__input {
+    width: 470px;
+  }
+
+  &__prize-count-wrapper {
+   position: relative;
+  }
+  &__prize-count {
+    position: absolute;
+    left: 357px;
+    background-color: $grey_additional_3;
+    border-radius: 0 $default_border_radius $default_border_radius 0;
+    padding: 14px 16px!important;
+    min-height: 44px;
+  }
+}

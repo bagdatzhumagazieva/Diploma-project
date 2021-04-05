@@ -1,0 +1,68 @@
+@import "src/assets/scss/vars";
+
+.answer-options {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid $grey_additional_2;
+  border-radius: 6px;
+
+  .answer-options__col__checkbox {
+    width: 100px;
+  }
+
+  .answer-option__header {
+    background: $grey_outline;
+
+    .answer-option__header__checkbox {
+      padding: 8px 16px 8px 8px;
+      border-top-left-radius: 5px;
+      border-right: 1px solid $grey_additional_2;
+    }
+
+    .answer-option__header__variant {
+      padding: 8px 8px 8px 16px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  .answer-options__row {
+    &:nth-child(even) {
+      background: $grey_outline;
+    }
+    .answer-option__radio-wrap {
+      border-right: 1px solid $grey_additional_2;
+
+      .answer-option__radio {
+        width: 12px;
+        margin: 0 auto;
+      }
+    }
+
+    .answer-option__checkbox-wrap {
+      border-right: 1px solid $grey_additional_2;
+
+      .answer-option__checkbox {
+        width: 14px;
+        margin: 0 auto;
+      }
+    }
+
+    .answer-option__label {
+      margin: 8px 22px 8px 16px;
+    }
+  }
+
+  .answer-options__empty {
+    border-right: 1px solid $grey_additional_2;
+  }
+
+  .answer-options__add-btn {
+    .answer-options__add-btn__icon {
+      background: transparent;
+      width: auto;
+      height: auto;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+}

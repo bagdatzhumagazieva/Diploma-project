@@ -1,0 +1,304 @@
+@import "src/assets/scss/vars";
+
+$padding: 16px;
+
+
+.button {
+  @extend .button--color-default;
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  border-radius: $default_border_radius;
+  padding: $padding;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--color-default {
+  color: $white;
+  background-color: $main_50;
+  border: none;
+
+  &:hover {
+    background-color: $main_55;
+  }
+
+  &:focus{
+    background-color: $main_45;
+  }
+
+  &:disabled {
+    background-color: $main_85;
+  }
+}
+
+// Button types
+.button--type-main {
+  @extend .button--color-default;
+}
+
+.button--type-main-red {
+  color: $white;
+  background-color: $red;
+  border: none;
+
+  &:hover {
+    background-color: $red_hover;
+  }
+
+  &:focus{
+    background-color: $red_clicked;
+  }
+
+  &:disabled {
+    background-color: $red_disabled;
+  }
+}
+
+.button--type-outlined {
+  color: $main_50;
+  border: 1px solid $main_50;
+  background-color: transparent;
+
+  &:hover {
+    color: $main_50;
+    background-color: $main_90;
+  }
+
+  &:focus {
+    color: $main_50;
+    background-color: $main_80;
+  }
+
+  &:disabled {
+    border: 1px solid $main_85;
+    color: $main_85;
+  }
+}
+
+.button--type-rounded {
+  //styles same as default button
+  box-shadow: 0 4px 34px rgba(255, 255, 255, 0.34), 0 4px 35px rgba(226, 226, 203, 0.17);
+  border-radius: 31px;
+  padding: 7.5px 22px;
+}
+
+.button--type-link {
+  color: $main_50;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    color: $main_60;
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: $main_40;
+    background-color: transparent;
+  }
+
+  &:disabled, &:disabled:hover {
+    color: $main_85;
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+}
+
+.button--type-link-underlined {
+  color: $black;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    color: $main_60;
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: $main_50;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $grey_additional_2;
+    background-color: transparent;
+  }
+}
+
+.button--type-black-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  background-color: $white;
+  border: 1px solid $grey_outline;
+  padding: 14px 24px;
+
+  .image {
+    transition: none !important;
+  }
+
+  &:hover {
+    color: $main_50;
+    border: 1px solid $main_50;
+    background-color: $white;
+
+    .image {
+      filter: invert(60%) sepia(87%) saturate(2118%) hue-rotate(360deg) brightness(103%) contrast(105%);
+    }
+  }
+
+  &:focus {
+    color: $main_50;
+    border: 1px solid $main_50;
+    background-color: $main_80;
+
+    .image {
+      filter: invert(60%) sepia(87%) saturate(2118%) hue-rotate(360deg) brightness(103%) contrast(105%);
+    }
+  }
+
+  &:disabled {
+    opacity: .6;
+    color: $black;
+    border: 1px solid $grey_outline;
+    background-color: $white;
+
+    .image {
+      filter: invert(11%) sepia(46%) saturate(998%) hue-rotate(193deg) brightness(92%) contrast(82%);
+    }
+  }
+}
+
+.button--type-plain {
+  display: block;
+  text-align: left;
+  padding: 0;
+  color: currentColor;
+  background: transparent;
+
+  &:hover, &:active, &:focus {
+    background-color: transparent;
+  }
+}
+
+.button--type-link-grey {
+  color: $grey_additional_2;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    color: $grey_additional_1;
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: $main_40;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $grey_additional_2;
+    background-color: transparent;
+  }
+}
+
+.button--type-link-black {
+  color: $black;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    color: $black;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: $grey_additional_1;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $grey_additional_2;
+    background-color: transparent;
+  }
+}
+.button--type-additional {
+  background-color: $white;
+  padding: 0;
+
+  &:hover {
+    background-color: $grey_outline;
+  }
+
+  &:focus {
+    background-color: $grey_additional_2;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+@each $key, $value in $colors {
+  $class_name: "button--color-#{$key}";
+  $color: rgba($value, 1);
+  .#{$class_name} {
+    color: $color;
+    &:hover, &:focus {
+      color: $color;
+    }
+  }
+}
+
+.button--loading {
+  position: relative;
+  background-color: $main_55;
+  height: 100%;
+  overflow: hidden;
+
+  &::after {
+    top:0;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .6), transparent);
+    animation: loading 1.5s infinite;
+  }
+}
+
+.button--underlined {
+  text-decoration: underline;
+}
+
+.button--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.marketplace-button-position{
+  width: 264px;
+  float: right;
+}

@@ -1,0 +1,21 @@
+.shop-order{
+  &__searcher-input {
+    width: 424px;
+  }
+
+  &__user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 30px;
+  }
+
+  &__status-icon {
+    width: 13.3px;
+    height: 13.3px;
+  }
+  &__status-icon--pending {
+    path {
+      stroke: #FDBF00;
+    }
+  }
+}

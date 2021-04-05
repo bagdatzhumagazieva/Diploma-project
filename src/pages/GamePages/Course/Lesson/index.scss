@@ -1,0 +1,28 @@
+@import "src/assets/scss/vars";
+
+.lesson-page {
+  .card-view {
+    width: 776px;
+    .card-view__description {
+      border-left: 4px solid $black;
+      padding-left: 12px;
+    }
+  }
+  .modal__btn--cancel {
+    margin-right: 24px;
+  }
+
+  .modal__btn--submit {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .module-test-rules {
+    .module-test-rules__dot {
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background-color: $black;
+    }
+  }
+}

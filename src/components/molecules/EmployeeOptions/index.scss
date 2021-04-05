@@ -1,0 +1,47 @@
+@import "src/assets/scss/vars";
+
+.employee-options {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  .employee-options__dots {
+    height: 24px;
+    justify-content: space-evenly;
+    .dots__item {
+      border-radius: 50%;
+      width: 2px;
+      height: 2px;
+      border: 2px solid $grey_additional_2;
+    }
+
+    &--active {
+      .dots__item {
+        border-color: $black;
+      }
+    }
+  }
+  &__select--last {
+    bottom: 32px!important;
+  }
+  &__select--firsts {
+    top: 32px!important;
+  }
+  .employee-options__select {
+    position: absolute;
+    background: $white;
+    right: 0;
+    padding: 8px 0;
+    border-radius: $default_border_radius;
+    z-index: 3;
+    border: 1px solid $grey_outline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    .employee-options__select__item {
+      background: $white;
+      padding: 8px 16px;
+      border-radius: 0;
+      &:hover {
+        background-color: $grey_divider;
+      }
+    }
+  }
+}

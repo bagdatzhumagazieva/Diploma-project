@@ -1,0 +1,38 @@
+@import "src/assets/scss/vars";
+
+.course-creation-choice-page {
+  background: $grey_background;
+  &__next-button {
+    padding: 16px 112px;
+  }
+}
+
+.course-creation-choice {
+  background: $white;
+  height: 526px;
+  border-radius: $default_border_radius;
+
+  .course-creation-choice__block {
+    .course-creation-choice__item {
+      cursor: pointer;
+      width: 302px;
+      height: 250px;
+      border: 1px solid $grey_outline;
+      border-radius: $default_border_radius;
+      .item__description {
+        color: $grey_additional_1;
+      }
+
+      &:hover, &--active {
+        border-color: $main_50;
+        color: $main_50;
+        svg path {
+          stroke: $main_50;
+        }
+        .item__description {
+          color: $main_50;
+        }
+      }
+    }
+  }
+}

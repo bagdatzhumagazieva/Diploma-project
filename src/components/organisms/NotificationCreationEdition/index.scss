@@ -1,0 +1,26 @@
+@import "src/assets/scss/vars";
+
+.notification-creation-edition {
+  &__btn {
+    width: 276px;
+  }
+
+  &__gen-info {
+    width: 876px;
+    background-color: $white;
+
+    &__msg {
+      width: 470px;
+      height: 244px;
+      border: 1px solid $grey_outline;
+    }
+
+    &__time {
+      width: 116px;
+    }
+  }
+
+  &__input {
+    width: 470px;
+  }
+}

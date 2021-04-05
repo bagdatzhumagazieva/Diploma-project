@@ -1,0 +1,16 @@
+@import "src/assets/scss/vars";
+
+.card-comment {
+  overflow: auto;
+
+  .card-comment__image {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+  .card-comment__children {
+    padding-left: 52px;
+  }
+}

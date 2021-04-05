@@ -1,0 +1,28 @@
+@import "src/assets/scss/vars";
+
+.company-page {
+  .company-page__tabs {
+    .tabs__options {
+      border-top: .5px solid $grey_outline;
+      position: sticky;
+      top: 78px;
+      z-index: 4;
+      background: $white;
+    }
+    .tabs__content {
+      .tabs__content--structure {
+        width: auto;
+        max-width: initial;
+      }
+    }
+  }
+
+  &__drawer {
+    position: fixed;
+    bottom: 0;
+    background: $white;
+    left: 216px;
+    width: calc(100% - 216px);
+    padding: 24px 32px;
+  }
+}

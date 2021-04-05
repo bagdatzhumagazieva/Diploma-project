@@ -1,0 +1,26 @@
+.employee-invitations-list {
+  .employee-invitations-list__header {
+    margin-right: 48px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    .header__column {
+      margin-left: 24px;
+      flex: 1;
+    }
+  }
+
+  .employee-invitations-list__group {
+    height: 200px;
+    overflow-y: auto;
+  }
+
+  .employee-invitations-list__actions {
+    margin: 24px;
+    .employee-invite-btn {
+      width: auto;
+      height: auto;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+}

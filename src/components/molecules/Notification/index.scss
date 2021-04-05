@@ -1,0 +1,63 @@
+@import "src/assets/scss/vars";
+
+$success: #DBF4DF;
+$danger: #FBCFCF;
+$warning: #FFD599;
+$info: #E0E7FF;
+
+.notification {
+  border-radius: $default_border_radius;
+  .notification__title {
+    margin-right: 18px;
+  }
+  .close-icon {
+    cursor: pointer;
+  }
+}
+
+.notification--big {
+  padding: 12px 24px;
+  .notification__title {
+    margin-bottom: 6px;
+  }
+  .notification__image {
+    margin-right: 34px;
+  }
+}
+
+.notification--small {
+  padding: 10px 16px;
+  .notification__image {
+    margin-right: 20px;
+  }
+}
+
+.notification--basic {
+  padding: 16px;
+  .notification__image {
+    margin-right: 20px;
+  }
+}
+
+.notification--success {
+  background: $success;
+}
+.notification--danger {
+  background: $danger;
+}
+.notification--warning {
+  background: $warning;
+}
+.notification--info {
+  background: $info;
+}
+
+.notifications-wrapper {
+  z-index: 4;
+  position: fixed;
+  top: 112px;
+  right: 24px;
+  .notification {
+    margin-bottom: 20px;
+  }
+}

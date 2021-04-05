@@ -1,0 +1,23 @@
+@import "src/assets/scss/vars";
+
+.tabs {
+  &__options {
+    border-top: 1px solid rgba($grey_additional_2, 0.2);
+    .options__item {
+      cursor: pointer;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+    }
+    .options__item--active {
+      color: $main_50;
+      border-bottom: 4px solid $main_50;
+      margin-bottom: -4px;
+    }
+  }
+}
+
+.modal .modal__children .tabs .grid {
+  width: auto;
+  max-width: initial;
+}

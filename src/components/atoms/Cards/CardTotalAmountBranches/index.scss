@@ -1,0 +1,9 @@
+$total_amount_branches_border_radius: 6px;
+
+.total-amount-branches {
+  border-radius: $total_amount_branches_border_radius;
+
+  &__item:last-child {
+    margin-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,27 @@
+.report-error__branch, .report-error__groups {
+  flex-shrink: 0;
+  margin-right: 24px;
+  width: 276px;
+}
+
+.report-error__branch {
+  margin-bottom: 18px;
+  .select__cur-option {
+    background: white;
+  }
+}
+
+.report-error-card {
+  background: white;
+  padding: 32px 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  margin-bottom: 24px;
+
+  .report-error-card__percent {
+    border-radius: 6px;
+    padding: 12px;
+    margin-left: 70px;
+    color: white;
+  }
+}

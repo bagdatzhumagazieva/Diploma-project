@@ -1,0 +1,28 @@
+@import "src/assets/scss/vars";
+
+.card-view-page {
+  background: $grey_background;
+  &.layout--minified {
+    .layout__content {
+      padding-left: 72px;
+    }
+  }
+  .card-view-page__edit-icon {
+    width: 16px;
+    height: 16px;
+    path {
+      stroke: $main_50;
+    }
+  }
+  .card-view-page__delete-icon {
+    width: 16px;
+    height: 16px;
+    path {
+      stroke: $red;
+    }
+  }
+
+  .card-view-page__card {
+    max-width: 776px;
+  }
+}

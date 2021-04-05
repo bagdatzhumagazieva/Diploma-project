@@ -1,0 +1,60 @@
+@import "src/assets/scss/vars";
+
+.chips {
+  background: $white;
+
+  .chips__content {
+    cursor: text;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border: 1px solid $grey_outline;
+    border-radius: 5px;
+    min-height: 44px;
+    max-height: 486px;
+    overflow-y: auto;
+
+    .chips__input {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 24px;
+      font-size: 16px;
+      line-height: 19px;
+      color: $black;
+      width: auto;
+      min-width: 100px;
+    }
+
+    .chips__value {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 24px;
+      border: 1px solid $grey_outline;
+      border-radius: 24px;
+
+      .value__delete {
+        width: 16px;
+        height: 16px;
+      }
+
+      &--invalid {
+        background: #F04848;
+        border: 0;
+        color: $white;
+      }
+    }
+  }
+
+  .chips__error-block {
+    display: none;
+  }
+}
+
+
+.chips--error {
+  .chips__content {
+    border-color: $red;
+  }
+  .chips__error-block {
+    display: block;
+  }
+}

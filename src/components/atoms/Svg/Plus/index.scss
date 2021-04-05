@@ -1,0 +1,17 @@
+@import 'src/assets/scss/vars';
+
+.plus-icon {
+  background: $white;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  &:hover {
+    background: $main_90;
+  }
+  &:active {
+    background: $main_75;
+  }
+}

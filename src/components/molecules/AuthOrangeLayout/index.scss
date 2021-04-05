@@ -1,0 +1,12 @@
+$content_width: 548px;
+
+.auth-orange-layout {
+  background-color: #2F80ED;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  .auth-orange-layout__content {
+    width: $content_width;
+  }
+}

@@ -1,0 +1,45 @@
+@import "src/assets/scss/vars.scss";
+
+$card_task_image_wrapper_size: 64px;
+$card_task_progress_border_radius: 6px;
+$card_task_progress_width: 180px;
+$card_task_content_width: 80%;
+$card_task_progress_value_height: 4px;
+
+.card-task {
+  &__image-wrapper {
+    min-width: $card_task_image_wrapper_size;
+    max-width: $card_task_image_wrapper_size;
+    min-height: $card_task_image_wrapper_size;
+    max-height: $card_task_image_wrapper_size;
+  }
+
+  &__content {
+    width: $card_task_content_width;
+  }
+
+  .card-task__header {
+    white-space: normal;
+    text-align: left;
+
+    &:hover, &:focus {
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  .card-task__progress {
+    background: $grey_outline;
+    border-radius: $card_task_progress_border_radius;
+    width: $card_task_progress_width;
+
+    .progress__value {
+      height: $card_task_progress_value_height;
+      background: $main_50;
+      border-radius: $card_task_progress_border_radius;
+      &--completed {
+        background: $green;
+      }
+    }
+  }
+}

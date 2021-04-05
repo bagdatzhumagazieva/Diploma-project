@@ -1,0 +1,38 @@
+@import "src/assets/scss/vars";
+
+.card-shop {
+  border-radius: $default_border_radius;
+  background: $white;
+  width: 376px;
+
+  .coin {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__image-wrapper {
+    border-radius: $default_border_radius;
+    position: relative;
+    border: 0.5px solid #B0BAC9;
+    text-align: center;
+
+    .shop-item__image {
+      height: 206px;
+      width: 283px;
+      object-fit: cover;
+      border-radius: $default_border_radius - 1;
+    }
+
+    .shop-item__rate {
+      width: 68px;
+      height: 32px;
+      padding: 4px 8px;
+      background: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+    }
+  }
+}

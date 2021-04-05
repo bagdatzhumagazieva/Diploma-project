@@ -1,0 +1,19 @@
+@import "src/assets/scss/vars";
+
+.item-chips {
+  background: #FFFFFF;
+  border: 1px solid $grey_outline;
+  box-sizing: border-box;
+  border-radius: 24px;
+  margin-right: 8px;
+  width: fit-content;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .item-chips__delete-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

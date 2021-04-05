@@ -1,0 +1,67 @@
+@import "src/assets/scss/vars";
+
+.battle-invitation {
+  &__main-content {
+    .battle-invitation__card-wrapper {
+      width: 860px;
+      .battle-invitation__card {
+        background: #FFFFFF;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+        border-radius: $default_border_radius;
+
+        .battle-invitation__rubric-select-block {
+          width: 358px;
+        }
+
+        .battle-invitation__select {
+          .select__chips {
+            width: 812px;
+          }
+        }
+      }
+
+      .battle-invitation__search-input {
+        width: 608px;
+      }
+
+      .battle-invitation__table {
+        border: 1px solid $grey_outline;
+        border-radius: $default_border_radius;
+        .table__image-wrapper {
+          width: 36px;
+          height: 36px;
+          min-width: 36px;
+          border-radius: 50%;
+          border: 0.5px solid $grey_additional_2;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .table__user-name {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+
+      .battle-invitation__submit-button {
+        width: 276px;
+      }
+    }
+  }
+}
+
+
+.modal-battle-instruction {
+  .modal-battle-instruction__dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background-color: $black;
+  }
+}

@@ -1,0 +1,25 @@
+.performance-detail__branch, .performance-detail__groups {
+  flex-shrink: 0;
+  margin-right: 24px;
+  width: 276px;
+}
+
+.performance-detail__branch {
+  margin-bottom: 18px;
+  .select__cur-option {
+    background: white;
+  }
+}
+
+.performance-employees-table {
+  .employees-table__user-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.performance-employees-search {
+  width: 424px;
+}

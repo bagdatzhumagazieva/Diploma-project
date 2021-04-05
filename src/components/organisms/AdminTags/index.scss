@@ -1,0 +1,42 @@
+@import "src/assets/scss/vars";
+
+.admin-tags {
+  width: 1176px;
+  margin: 0 auto;
+
+  .admin-tags__input-searcher {
+    width: 376px;
+  }
+  .admin-tags__content {
+    border-radius: $default_border_radius;
+    background-color: $white;
+
+    .admin-tags__alphabet {
+      width: 650px;
+      .alphabet__letter {
+        color: $main_85;
+
+        &:hover, &:focus, &--active {
+          color: $main_50;
+        }
+      }
+    }
+
+    .admin-tags__list-block {
+      border-top: 1px solid $grey_divider;
+      .admin-tags__list {
+        min-height: 246px;
+        .list__item {
+          margin-bottom: 14px;
+          cursor: pointer;
+          border: 1px solid $grey_outline;
+          border-radius: 24px;
+          .item__delete-icon {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

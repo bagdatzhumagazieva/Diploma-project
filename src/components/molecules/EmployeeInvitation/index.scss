@@ -1,0 +1,53 @@
+@import "src/assets/scss/vars";
+
+.employee-invitation {
+  border-bottom: 1px solid #E0E0E5;
+  .employee-invitation__branches,
+  .employee-invitation__groups,
+  .employee-invitation__input {
+    flex: 1;
+    margin-left: 24px;
+  }
+
+  .employee-invitation__input .input-field__input {
+    font-size: $sub_text_size;
+    line-height: $sub_text_lh;
+    border: none;
+    padding: 16px 24px 16px 0;
+  }
+
+  .employee-invitation__branches, .employee-invitation__groups {
+    .select__cur-option {
+      height: 100%;
+      border: none;
+      padding-left: 0 !important;
+
+      .select__cur-option__content {
+        height: 100%;
+      }
+    }
+    .select__options {
+      margin-top: -5px !important;
+    }
+  }
+
+  .employee-invitation__groups {
+    .select__cur-option {
+      padding-right: 0 !important;
+    }
+  }
+
+  .employee-invitation__delete-btn {
+    padding: 16px;
+    cursor: pointer;
+    .employee-invitation__delete-btn__icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .employee-invitation__errors {
+    padding: 8px 24px;
+    background: $grey_divider;
+  }
+}

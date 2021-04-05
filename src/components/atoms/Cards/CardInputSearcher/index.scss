@@ -1,0 +1,16 @@
+@import "src/assets/scss/vars";
+
+.card-input-searcher {
+  background: $white;
+  border-radius: 0;
+
+  &:focus, &:hover {
+    background: $grey_divider;
+  }
+
+  &__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}

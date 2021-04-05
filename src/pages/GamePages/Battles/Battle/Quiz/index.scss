@@ -1,0 +1,19 @@
+@import "src/assets/scss/vars";
+
+.battle-quiz {
+  width: 776px;
+  background-color: white;
+  border-radius: $default_border_radius;
+
+  &__question {
+    border: 1px solid $grey_outline;
+    border-radius: 6px;
+    &-error {
+      border-color: $red;
+    }
+  }
+
+  &__button {
+    padding: 11px 78px;
+  }
+}

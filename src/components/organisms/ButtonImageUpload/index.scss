@@ -1,0 +1,15 @@
+@import "src/assets/scss/vars";
+
+.button-image-upload {
+  .button-image-upload__image {
+    width: 160px;
+    height: 160px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: $default_border_radius;
+    border: 1px solid $grey_additional_2;
+  }
+  .button-image-upload__input {
+    display: none;
+  }
+}

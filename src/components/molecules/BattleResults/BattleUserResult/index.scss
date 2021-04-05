@@ -1,0 +1,42 @@
+.battle-results {
+    &__card {
+        width: 376px;
+        border: 1px solid #E0E0E6;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+        border-radius: 6px;
+        background: #FFFFFF;
+        padding: 20px;
+    }
+
+    &__questions {
+        background: #FFFFFF;
+        border: 1px solid #E0E0E6;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 24px;
+        color: black;
+    }
+}
+
+.question-correct {
+    color: black;
+    border: 1px solid #2ABE42;
+    background: rgba(42, 190, 66, 0.2);
+}
+
+.question-incorrect {
+    color: black;
+    border: 1px solid #F04848;
+    background: rgba(240, 72, 72, 0.2);
+    ;
+}
+
+.question-current {
+    color: #FF9800;
+    border: 1px solid #FF9800;
+    background: #FFFFFF;
+}

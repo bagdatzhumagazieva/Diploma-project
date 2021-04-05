@@ -1,0 +1,32 @@
+@import "src/assets/scss/vars";
+
+.content-page {
+  .content-info {
+    background: $white;
+
+    .content-info__content {
+      margin-top: 24px;
+      color: $grey_additional_2;
+      width: 576px;
+    }
+  }
+
+  .content-page__drawer {
+    position: fixed;
+    bottom: 0;
+    background: $white;
+    left: 216px;
+    width: calc(100% - 216px);
+    padding: 24px 32px;
+  }
+
+
+  .table {
+    .table__circle {
+      background-color: $grey_additional_2;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}

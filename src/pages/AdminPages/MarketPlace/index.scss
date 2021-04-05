@@ -1,0 +1,13 @@
+@import "src/assets/scss/vars";
+
+.marketplace {
+  .marketplace-info {
+    background: $white;
+
+    .marketplace-info__content {
+      margin-top: 24px;
+      color: $grey_additional_2;
+      width: 576px;
+    }
+  }
+}

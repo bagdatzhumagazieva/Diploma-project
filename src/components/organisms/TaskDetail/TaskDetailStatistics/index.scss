@@ -1,0 +1,14 @@
+@import "src/assets/scss/vars";
+
+.task-statistic {
+  width: 100%;
+  background-color: $white;
+
+  &__progress-bar {
+    width: 130px;
+  }
+
+  &__progress-title {
+    width: 150px;
+  }
+}

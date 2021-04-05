@@ -1,0 +1,17 @@
+@import "src/assets/scss/vars";
+
+.card-basket {
+  border-radius: $default_border_radius;
+  background: $white;
+
+  &__img {
+    width: 124px;
+    height: 136px;
+    border-radius: $default_border_radius;
+  }
+
+  &__icon {
+    width: 11px;
+    height: 11px;
+  }
+}

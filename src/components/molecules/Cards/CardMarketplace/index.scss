@@ -1,0 +1,29 @@
+@import "src/assets/scss/vars";
+
+.card-marketplace {
+  border-radius: $default_border_radius;
+  background: $white;
+
+  &__description {
+    height: 42px;
+  }
+
+  .line {
+    border: 1px solid $grey_outline;
+  }
+
+  &__image-wrapper {
+    border-radius: $default_border_radius;
+
+    .card-marketplace__image {
+      height: 200px;
+      object-fit: cover;
+      border-radius: $default_border_radius - 1;
+    }
+  }
+
+  &__btn {
+    width: 138px;
+    height: 34px;
+  }
+}

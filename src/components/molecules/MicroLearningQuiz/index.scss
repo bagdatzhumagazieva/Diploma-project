@@ -1,0 +1,46 @@
+@import "src/assets/scss/vars";
+
+.micro-learning-quiz {
+  background: $white;
+  width: 472px;
+
+  .micro-learning-quiz__button {
+    color: $black;
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+    background-color: $white;
+    padding: 0;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
+
+    &:hover:not([disabled]) {
+      color: $black;
+      border-color: $grey_outline;
+      background-color: $grey_background;
+    }
+
+    &--selected, &:focus:not([disabled]) {
+      border-color: $main_50;
+      color: $main_50;
+      background-color: $main_90;
+    }
+
+    &--right {
+      border-color: $green;
+      color: $green;
+      background-color: rgba(42, 190, 66, 0.2);
+    }
+
+    &--wrong {
+      border-color: $red;
+      color: $red;
+      background-color: rgba(240, 72, 72, 0.2);
+    }
+  }
+
+  .micro-learning-quiz__alert-image {
+    max-width: 100%;
+  }
+}

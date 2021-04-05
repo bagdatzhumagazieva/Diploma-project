@@ -1,0 +1,64 @@
+@import "src/assets/scss/vars";
+
+.game-creation-edition {
+  &__text-status {
+    &--DRAFT {
+      color: $red;
+    }
+    &--PUBLISHED {
+      color: $green;
+    }
+    .text-status_circle {
+      min-width: 8px;
+      min-height: 8px;
+      border-radius: 50%;
+      &--DRAFT {
+        background-color: $red;
+      }
+      &--PUBLISHED {
+        background-color: $green;
+      }
+    }
+  }
+  .game-creation-edition__block {
+    .game-creation-edition__sidebar {
+      width: 276px;
+    }
+    .game-creation-edition__content {
+      width: 876px;
+      .general-information .general-information__content,
+      .reward .reward__content,
+      .content .reward__block {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+        border-radius: $default_border_radius;
+      }
+
+      .reward {
+        .reward__input {
+          width: 358px;
+          &--wide {
+            width: 470px;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__line {
+    border: 1px solid $grey_outline;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    path {
+      stroke: $grey_additional_1
+    }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+  }
+}

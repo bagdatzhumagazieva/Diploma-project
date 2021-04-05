@@ -1,0 +1,14 @@
+.multiple-invitation {
+  margin: 24px;
+  .multiple-invitation__branch {
+    flex-basis: 50%;
+    margin-right: 24px;
+  }
+  .multiple-invitation__groups {
+    flex-basis: 50%;
+  }
+
+  .multiple-invitation__cancel-btn {
+    padding: 16px 46px;
+  }
+}

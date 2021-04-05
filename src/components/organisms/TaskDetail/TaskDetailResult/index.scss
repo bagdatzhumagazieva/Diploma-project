@@ -1,0 +1,23 @@
+@import "src/assets/scss/vars";
+
+.task-result {
+  width: 100%;
+  background-color: $white;
+
+  .excel-icon-wrap {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    border: 1px solid $grey_outline;
+    background: $white;
+    cursor: pointer;
+    .excel-icon {
+      width: 24px;
+      height: 24px;
+      margin: auto;
+    }
+  }
+}
+
+

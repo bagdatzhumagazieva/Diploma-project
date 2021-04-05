@@ -1,0 +1,24 @@
+@import "src/assets/scss/vars";
+
+.excel-icon-wrap {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  border: 1px solid $grey_outline;
+  background: $white;
+  cursor: pointer;
+  .excel-icon {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+  }
+}
+
+.invitation-success-modal {
+  padding: 24px 32px;
+  .invitation-success-modal__close-btn {
+    padding: 16px 50px;
+    margin-top: 24px;
+  }
+}

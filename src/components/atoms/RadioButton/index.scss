@@ -1,0 +1,52 @@
+@import "src/assets/scss/vars";
+
+$radio_button_min_height: 19px;
+$custom_radio_size: 12px;
+$custom_radio_dot_size: 8px;
+
+.radio-button {
+  display: block;
+  min-height: $radio_button_min_height;
+  &:hover {
+    cursor: pointer;
+  }
+  .radio {
+    opacity: 0;
+  }
+  .custom-radio {
+    width: $custom_radio_size;
+    height: $custom_radio_size;
+    background: $white;
+    border: 1px solid $grey_additional_2;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--active {
+      border: 1px solid $main_50;
+    }
+
+    &:hover {
+      border: 1px solid $grey_additional_1;
+    }
+
+    &::after {
+      content: '';
+      display: none;
+      position: absolute;
+      width: $custom_radio_dot_size;
+      height: $custom_radio_dot_size;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: $main_50;
+      border-radius: 50%;
+    }
+  }
+
+  .radio:checked ~ .custom-radio::after {
+    display: block;
+  }
+}
+

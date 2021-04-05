@@ -1,0 +1,13 @@
+$registration_form_content: 470px;
+
+.registration-form {
+  background-color: #2F80ED;
+
+  .registration-form__content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 6px;
+    width: $registration_form_content;
+  }
+}
+

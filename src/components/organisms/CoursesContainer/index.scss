@@ -1,0 +1,22 @@
+@import "src/assets/scss/vars";
+
+.courses-container {
+  &__header {
+    .courses-container__filter {
+      min-width: 154px;
+    }
+  }
+
+  &__content {
+    background-color: $grey_background;
+
+    .courses-container__card {
+      width: 376px;
+      margin-right: 24px;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+  }
+}

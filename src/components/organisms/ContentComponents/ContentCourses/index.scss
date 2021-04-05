@@ -1,0 +1,21 @@
+.content-courses {
+  .course-img-wrap {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    .course-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  .course-rewards__coin {
+    width: 14px;
+    height: 14px;
+  }
+  &__input-searcher{
+    width: 376px;
+  }
+}

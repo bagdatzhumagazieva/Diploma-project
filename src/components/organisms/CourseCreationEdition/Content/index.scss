@@ -1,0 +1,167 @@
+@import "src/assets/scss/vars";
+
+.content {
+  .content__block {
+    background-color: $white;
+    border-radius: $default_border_radius;
+
+    .content__empty-module {
+      background-color: #F2F3F6;
+      border: 1px solid $grey_placeholder;
+      border-radius: $default_border_radius;
+      height: 48px;
+    }
+
+    .content__module-button {
+      padding: 14px 24px;
+
+      .module-button__plus-icon path {
+          stroke: $black;
+      }
+
+      &:hover {
+        .module-button__plus-icon path {
+          stroke: $main_50;
+        }
+      }
+    }
+
+    .content__final-exam {
+      background: rgba(224, 231, 255, 0.2);
+      border: 1px solid $grey_outline;
+      border-radius: $default_border_radius;
+
+      .final-exam__icon {
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .card {
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+    .card__menu-icon {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      cursor: all-scroll;
+    }
+
+    .card__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card__image {
+      border-radius: 4px;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+    }
+
+    .card__icon {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      path {
+        stroke: $grey_additional_1 !important;
+      }
+    }
+
+    .card__icon--edit {
+      right: 48px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+
+.module-addition-edition {
+  background: #F2F3F6;
+  border: 1px solid $grey_placeholder;
+  border-radius: $default_border_radius;
+
+  .module-addition-edition__content {
+    background-color: $white;
+    border: 1px solid  $grey_outline;
+    border-radius: $default_border_radius;
+
+    .module-addition-edition__input {
+      width: 470px;
+    }
+
+    .module-addition-edition__add-button {
+      padding: 12px 56px;
+    }
+  }
+}
+
+
+.module {
+  background-color: #F2F3F6;
+  border: 1px solid $grey_placeholder;
+  border-radius: $default_border_radius;
+  .module__header {
+    .header__title:hover {
+      .module__icon {
+        display: block;
+      }
+    }
+    .module__image {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+    }
+
+    .module__icon {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      display: none;
+      path {
+        stroke: $grey_additional_1;
+      }
+
+      &--edit {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .header__arrow {
+      width: 24px;
+      height: 24px;
+    }
+
+    .module__drag-icon {
+      cursor: all-scroll;
+    }
+  }
+  .module__test-block {
+    background: rgba(224, 231, 255, 0.2);
+    border: 1px solid $grey_outline;
+    border-radius: $default_border_radius;
+  }
+
+  &--disable {
+    .module__header {
+      .header__title:hover {
+        .module__icon {
+          display: none;
+        }
+      }
+      .module__drag-icon {
+        cursor: not-allowed;
+        path {
+          stroke: $grey_additional_2;
+        }
+      }
+    }
+  }
+}
+

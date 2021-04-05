@@ -1,0 +1,37 @@
+@import "src/assets/scss/vars";
+
+.company-structure {
+  .company-structure__buttons {
+    position: sticky;
+    top: 172px;
+    z-index: 4;
+    .company-structure__add-btn {
+      padding: 14px 24px;
+      z-index: 2;
+
+      &:hover {
+        .company-structure__add-btn__icon {
+          transform: rotate(-90deg);
+          transition: .15s ease-in-out;
+        }
+      }
+    }
+
+    .company-structure__excel-btn__icon {
+      display: flex;
+      z-index: 2;
+      width: 52px;
+      height: 52px;
+      border-radius: 6px;
+      border: 1px solid $grey_outline;
+      background: $white;
+      cursor: pointer;
+
+      .excel-icon {
+        width: 24px;
+        height: 24px;
+        margin: auto;
+      }
+    }
+  }
+}

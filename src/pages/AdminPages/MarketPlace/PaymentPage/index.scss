@@ -1,0 +1,70 @@
+@import "src/assets/scss/vars";
+
+.payment {
+
+  .payment__blank-content {
+    background-color: $white;
+    border-radius: $default_border_radius;
+
+    &__select {
+      width: 310px;
+    }
+  }
+
+  .payment__card {
+    width: 676px;
+    background-color: $white;
+    border-radius: $default_border_radius;
+
+    .line {
+      border: 1px solid $grey_outline;
+    }
+
+    .payment__card__img {
+      border-radius: $default_border_radius;
+      width: 168px;
+      height: 131px;
+      object-fit: cover;
+    }
+
+    &__btn-wrapper {
+      width: 496px;
+      height: 52px;
+      background: $grey_additional_3;
+      border-radius: $default_border_radius;
+
+      .payment__card__btn {
+        width: 280px;
+        height: 100%;
+      }
+    }
+  }
+
+  .payment__card-instruction {
+    border-radius: $default_border_radius;
+    background-color: $white;
+    height: 108px;
+    width: 476px;
+  }
+}
+
+.payment-modal {
+  margin: 64px auto;
+
+  &__body {
+    width: 647px;
+    margin-left: 200px;
+
+    &__card {
+      background: #F2F3F6;
+      width: 611px;
+
+      &__img {
+        border-radius: $default_border_radius;
+        width: 168px;
+        height: 131px;
+        object-fit: cover;
+      }
+    }
+  }
+}

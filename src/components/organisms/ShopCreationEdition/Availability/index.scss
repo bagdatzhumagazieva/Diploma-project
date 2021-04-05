@@ -1,0 +1,17 @@
+@import "src/assets/scss/vars";
+
+.availability {
+  &__info {
+    width: 876px;
+    background-color: $white;
+
+    &__select {
+      width: 358px;
+    }
+
+    .searcher__input-wrapper {
+      background-color: white;
+      width: 608px;
+    }
+  }
+}

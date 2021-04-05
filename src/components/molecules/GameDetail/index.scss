@@ -1,0 +1,105 @@
+@import "src/assets/scss/vars";
+
+.game-detail {
+  background: $white;
+  border-radius: $default_border_radius;
+  width: 900px;
+  overflow: auto;
+
+  &__header {
+    border-radius: $default_border_radius $default_border_radius 0 0;
+    height: 148px;
+    min-height: 148px;
+    background-size: cover;
+    background-position: center;
+    &:before {
+      content: '';
+      border-radius: $default_border_radius $default_border_radius 0 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba($black, .4);
+    }
+  }
+
+  &__content {
+    .game-detail__image-wrapper {
+      width: 244px;
+      min-width: 244px;
+      height: 166px;
+      border-radius: $default_border_radius;
+      border: 1px solid $grey_additional_2;
+      .game-detail__image {
+        border-radius: $default_border_radius - 1;
+      }
+
+      .game-detail__certificate {
+        top: 2px;
+        left: 0;
+        transform: rotate(-10deg);
+      }
+    }
+
+    .game-detail__right {
+      .game-detail__title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .game-detail__description {
+        color: $grey_additional_2;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .game-detail__players {
+        min-width: 74px;
+      }
+
+      .game-detail__coin-icon {
+        height: 14px;
+        width: 14px;
+        min-width: 14px;
+      }
+
+      .game-detail__block {
+        width: 240px;
+
+        .game-detail__passed-levels:last-child {
+          margin-bottom: 4px !important;
+        }
+
+        .game-detail__leader {
+          .leader__image {
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+            border: 1px solid $grey_additional_2;
+          }
+
+          .leader__coin {
+            border-radius: $default_border_radius;
+            color: $white;
+            padding: 1.5px 8px;
+            background: $main_65;
+            line-height: 15px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

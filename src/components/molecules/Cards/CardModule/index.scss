@@ -1,0 +1,19 @@
+@import 'src/assets/scss/vars';
+
+.card-module {
+  border: 1px solid $grey_outline;
+  border-radius: $default_border_radius;
+
+  .card-module__header {
+    background: rgba(224, 231, 255, 0.2);
+    .card-module__arrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .lock-icon--grey {
+    path {
+      stroke: $grey_additional_2;
+    }
+  }
+}
