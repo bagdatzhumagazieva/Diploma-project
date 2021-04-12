@@ -5,7 +5,7 @@ import { AuthTypes } from 'src/store/auth/types';
 const createActivationUrl = `${API}auth/create_activation`;
 const codeUrl = `${API}auth/confirm_activation`;
 const resendCodeUrl = `${API}auth/resend_activation`;
-const authUrlLogin = 'http://localhost:8500/auth/login/';
+const authUrlLogin = 'http://localhost:8200/main/auth/login';
 const authUrl = `${API}auth/`;
 
 export const createActivation = (data: any) => (

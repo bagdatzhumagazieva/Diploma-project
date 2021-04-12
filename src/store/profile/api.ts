@@ -4,7 +4,7 @@ import { ProfileTypes } from 'src/store/profile/types';
 
 const updateProfileUrl = `${API}users/update_user`;
 const getProfileUrl = `${API}users/profile`;
-const finishRegistrationUrl = 'http://localhost:8500/auth/register/';
+const finishRegistrationUrl = 'http://localhost:8200/main/auth/register';
 const changePasswordUrl = `${API}users/change_password`;
 const avatarUrl = `${API}media/avatar/`;
 const getAvatarUrl = process.env.REACT_APP_STAGE !== 'prod' ? 'https://microlearning.kz:8443/media/users/' : 'https://api.gamisoft.ru/media/users/';

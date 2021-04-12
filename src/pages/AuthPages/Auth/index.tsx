@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { withTranslation } from 'react-i18next';
+import { withTranslation, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router';
 import { onKeyDown } from 'src/utils/helpers';
 import { AdminRouterPaths } from 'src/core/enum';
-
 import authActions from 'src/store/auth/actions';
-import profileActions from 'src/store/profile/actions';
+// import profileActions from 'src/store/profile/actions';
 
 import Button from 'src/components/atoms/Button';
 import Card from 'src/components/atoms/Cards/Card';
@@ -30,7 +29,9 @@ function AuthPage(props: AuthPageTypes.IProps) {
     onGetLogin, token: propsToken,
     errorMessage, loadingToken, unauthorized, getProfile,
   } = props;
+  const { t } = useTranslation('common');
 
+  console.log(t, t('common:signIn'))
   const history = useHistory<{ addNewAccount: boolean }>();
   const token = localStorage.getItem(LOCAL_STORAGE.TOKEN);
   const [authData, setAuthData] = useState<IAuth>({ login: '', password: '' });
@@ -165,7 +166,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
           htmlTypes="submit"
           loading={loadingToken}
         >
-          {props.t('common:signIn')}
+          {t('signIn')}
         </Button>
         <div className="mt-24">
           <Typography variant="text" color="blacker">
@@ -196,8 +197,8 @@ export const mapStateToProps = (state: any) => ({
 
 export const mapDispatchToProps = {
   onGetLogin: authActions.login,
-  getProfile: profileActions.getProfile,
-  onGetSocialLogin: authActions.socialLogin,
+  // getProfile: profileActions.getProfile,
+  // onGetSocialLogin: authActions.socialLogin,
 };
 
 export default connect<any>(

@@ -3,7 +3,6 @@ import { ReactSortable } from 'react-sortablejs';
 import useNotification from 'src/components/molecules/Notification/useNotification';
 
 import Button from 'src/components/atoms/Button';
-import Image from 'src/components/atoms/Image';
 import Typography from 'src/components/atoms/Typography';
 import Modal from 'src/components/molecules/Modal';
 import CourseCreationContext from 'src/components/organisms/CourseCreationEdition/CourseCreationContext';
@@ -15,7 +14,6 @@ import { MODULE_DEFAULT_DATA2 } from 'src/components/organisms/CourseCreationEdi
 import { ModuleStatus, ModuleTypes } from 'src/store/module/types';
 import { NotificationType } from 'src/components/molecules/Notification/types';
 import { ReactComponent as PlusIcon } from 'src/assets/img/icons/plus.svg';
-import FlagIcon from 'src/assets/img/icons/flag.svg';
 import { Status } from 'src/store/course/types';
 import './index.scss';
 
@@ -173,17 +171,6 @@ function Content(props: ContentTypes.IProps) {
               Добавить Модуль
             </Button>
             <div className="line my-32" />
-            <div className="content__final-exam px-24 py-24 d-flex align-items-center">
-              <Image src={FlagIcon} className="final-exam__icon mr-16" alt="flag icon" />
-              <Typography variant="h2" color="grey_additional_2">Финальный экзамен</Typography>
-            </div>
-            <Typography
-              color="grey_additional_1"
-              variant="subtext"
-              className="mt-8"
-            >
-              Финальный экзамен будет создан из вопросов в тестах
-            </Typography>
           </div>
         ) : (
           <ModuleAdditionEdition

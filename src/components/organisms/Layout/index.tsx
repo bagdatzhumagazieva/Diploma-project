@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import { useLocation, withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 import { useWindowDimensions } from 'src/hooks/useWindowDimensions';
 import { mapPropsToAttributes } from 'src/core/components';
 import { LOCAL_STORAGE } from 'src/core/store/values';
@@ -48,7 +48,6 @@ function Layout(props: LayoutTypes.IProps) {
     getMyExercises, myExercisesTotal, getNotification,
     notifications, history, unauthorized,
     company, getCompanyById, getCoursesCount, coursesCount,
-    leaveBattle,
   } = props;
   const [isUserAdmin, setIsUserAdmin] = useState(false);
   const [isSuperUserAdmin, setIsSuperUserAdmin] = useState(false);
@@ -64,7 +63,6 @@ function Layout(props: LayoutTypes.IProps) {
   const [showModal, setShowModal] = useState<boolean>(false);
   const value = { showSidebar, setShowSidebar };
   const { companyId } = useContext(AppContext);
-  const location = useLocation();
 
   const unreadNotification = notifications ? notifications.filter(notification => !notification.isRead) : [];
   const notification = useNotification();
@@ -81,34 +79,6 @@ function Layout(props: LayoutTypes.IProps) {
       });
   };
 
-  useEffect(() => {
-    const lastPathname = localStorage.getItem(LOCAL_STORAGE.LAST_PATHNAME) || '';
-    const isFinishedBattle = (localStorage.getItem(LOCAL_STORAGE.BATTLE_FINISHED) || '') === 'finished';
-    const battleId = +lastPathname.slice(lastPathname.indexOf('battle/') + 7);
-    localStorage.setItem(LOCAL_STORAGE.LAST_PATHNAME, location.pathname);
-    if (!isFinishedBattle && lastPathname.includes('battle/') && !location.pathname.includes('battle/')) {
-      localStorage.removeItem(LOCAL_STORAGE.BATTLE_FINISHED);
-      window.addEventListener('beforeunload', e => alertUser(e, battleId));
-      if (window.confirm('Если вы закроете приложение, вам будет засчитано поражение. Вы уверены, что хотите отдать победу сопернику? ')) {
-        leaveBattle && companyId && leaveBattle(battleId, companyId);
-      } else {
-        history.goBack();
-      }
-    }
-    return () => {
-      if (lastPathname.includes('battle/') && !location.pathname.includes('battle/')) {
-        window.removeEventListener('beforeunload', e => alertUser(e, battleId));
-      }
-    };
-  },        [location]);
-
-  const alertUser = (e: any, battleId: number) => {
-    e.preventDefault();
-    e.returnValue = '';
-    if (window.confirm('Если вы закроете приложение, вам будет засчитано поражение. Вы уверены, что хотите отдать победу сопернику? ')) {
-      companyId && leaveBattle && leaveBattle(battleId, companyId);
-    }
-  };
 
   useEffect(
     () => {
