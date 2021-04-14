@@ -31,7 +31,6 @@ function AuthPage(props: AuthPageTypes.IProps) {
   } = props;
   const { t } = useTranslation('common');
 
-  console.log(t, t('common:signIn'))
   const history = useHistory<{ addNewAccount: boolean }>();
   const token = localStorage.getItem(LOCAL_STORAGE.TOKEN);
   const [authData, setAuthData] = useState<IAuth>({ login: '', password: '' });
@@ -54,7 +53,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
   useEffect(
     () => {
       if (authError) {
-        addNotification(NotificationType.Danger, 'Ошибка авторизации.Попробуйте зайти позже!');
+        addNotification(NotificationType.Danger, t('AuthorizationError'));
       }
     },
     [authError],
@@ -102,8 +101,8 @@ function AuthPage(props: AuthPageTypes.IProps) {
         },
       });
     } else {
-      if (isEmpty(login)) setLoginError('Введите данные');
-      if (isEmpty(password)) setPasswordError('Введите данные');
+      if (isEmpty(login)) setLoginError(t('fillData'));
+      if (isEmpty(password)) setPasswordError(t('fillData'));
     }
   };
 
@@ -120,12 +119,12 @@ function AuthPage(props: AuthPageTypes.IProps) {
   return (
     <AuthOrangeLayout>
       <Card classNames="auth-page__card fill text-center mt-24">
-        <Typography variant="h1">Вход в систему</Typography>
+        <Typography variant="h1">{t('enterSystem')}</Typography>
         <Input
           name={AUTH_TYPES.LOGIN}
           type="text"
-          label="Логин"
-          placeholder="Введите логин"
+          label={t('login')}
+          placeholder={t('writeLogin')}
           errorMessage={loginError}
           classNames="mb-24"
           value={authData.login}
@@ -135,8 +134,8 @@ function AuthPage(props: AuthPageTypes.IProps) {
         <Input
           name={AUTH_TYPES.PASSWORD}
           type="password"
-          label="Пароль"
-          placeholder="Введите пароль"
+          label={t('password')}
+          placeholder={t('writePassword')}
           errorMessage={passwordError}
           value={authData.password}
           onChange={handleInputChange}
@@ -148,7 +147,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
             isClicked={saveMe}
             setClicked={(state: boolean) => setSaveMe(state)}
             color="grey_additional_2"
-            title="Запомнить меня"
+            title={t('rememberMe')}
           />
           <Button
             type="link"
@@ -156,7 +155,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
             classNames="auth-page__btn"
             to="/reset"
           >
-            Забыли пароль?
+            {t('forgotPassword')}
           </Button>
         </div>
         <Button
@@ -170,7 +169,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
         </Button>
         <div className="mt-24">
           <Typography variant="text" color="blacker">
-            Еще нет аккаунта?
+            {t('noAccount')}
             <Button
               type="link"
               variant="text"
@@ -178,7 +177,7 @@ function AuthPage(props: AuthPageTypes.IProps) {
               to="/registration-form"
               className="ml-4"
             >
-              Зарегистрироваться
+              {t('register')}
             </Button>
           </Typography>
         </div>

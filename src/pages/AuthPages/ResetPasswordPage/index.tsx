@@ -11,6 +11,7 @@ import Typography from 'src/components/atoms/Typography';
 import AuthOrangeLayout from 'src/components/molecules/AuthOrangeLayout';
 import { ResetPasswordTypes } from 'src/pages/AuthPages/ResetPasswordPage/types';
 import { withRouter } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 function ResetPasswordPage(props: ResetPasswordTypes.IProps) {
   const { onFinishRegistration, profileError, profile, codeConfirmation, history, profileLoading } = props;
@@ -18,6 +19,7 @@ function ResetPasswordPage(props: ResetPasswordTypes.IProps) {
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState<string>();
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     if (codeConfirmation) history.goBack();
@@ -43,11 +45,11 @@ function ResetPasswordPage(props: ResetPasswordTypes.IProps) {
 
   const onClickSendPassword = () => {
     if (password.length === 0 || repeatPassword.length === 0) {
-      setErrorMessage('Пустота');
+      setErrorMessage(t('empty'));
       return;
     }
     if (password !== repeatPassword) {
-      setErrorMessage('Пароли не совпадают');
+      setErrorMessage(t('passwordNotMatch'));
       return;
     }
 
@@ -63,21 +65,21 @@ function ResetPasswordPage(props: ResetPasswordTypes.IProps) {
         backLink="/auth"
         classNames="fill text-left mt-24"
       >
-        <Typography variant="h1">Сбросить пароль</Typography>
+        <Typography variant="h1">{t('resetPassword')}</Typography>
         <div className="text-left mt-16 mb-32">
           <Input
             type="password"
-            label="Новый пароль"
-            placeholder="Новый пароль"
+            label={t('newPassword')}
+            placeholder={t('newPassword')}
             classNames="mb-24"
-            hint="Пароль должен состоять из букв на латинице и цифр. Минимум 6 символов."
+            hint={t('passwordRequirement')}
             onChange={onChangePassword}
             onKeyDown={onKeyDown(onClickSendPassword)}
           />
           <Input
             type="password"
-            label="Повторите пароль"
-            placeholder="Повторите пароль"
+            label={t('repeatPassword')}
+            placeholder={t('repeatPassword')}
             errorMessage={errorMessage}
             onChange={onChangeRepeatPassword}
             onKeyDown={onKeyDown(onClickSendPassword)}
@@ -89,7 +91,7 @@ function ResetPasswordPage(props: ResetPasswordTypes.IProps) {
           onClick={onClickSendPassword}
           loading={profileLoading}
         >
-          Отправить
+          {t('send')}
         </Button>
       </Card>
     </AuthOrangeLayout>

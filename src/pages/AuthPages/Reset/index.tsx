@@ -16,9 +16,11 @@ import RadioTabs from 'src/components/molecules/RadioTabs';
 import { ResetPageTypes } from 'src/pages/AuthPages/Reset/types';
 import { countriesCode } from 'src/components/molecules/CodeSelect/mock';
 import { tabs } from 'src/pages/AuthPages/Reset/mock';
+import { useTranslation } from 'react-i18next';
 
 function ResetPage(props: ResetPageTypes.IProps) {
   const { onCreateActivation, history, registration, registrationError, registrationLoading } = props;
+  const { t } = useTranslation('common');
 
   const [activeRadioBtnIndex, setActiveRadioBtnIndex] = useState<string>('0');
   const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
@@ -55,7 +57,7 @@ function ResetPage(props: ResetPageTypes.IProps) {
     if (activeRadioBtnIndex === '0') setEmailOrPhone(getNumbers(value));
 
     if (isDataEmpty(value)) {
-      setErrorMessage('Заполните данные');
+      setErrorMessage(t('fillData'));
       return;
     }
 
@@ -89,13 +91,12 @@ function ResetPage(props: ResetPageTypes.IProps) {
         backLink="/"
         classNames="fill text-left mt-24"
       >
-        <Typography variant="h1">Сбросить пароль</Typography>
+        <Typography variant="h1">{t('resetPassword')}</Typography>
         <Typography
           variant="subtext"
           className="color_grey_additional_2 mt-16 text-left mb-36"
         >
-          Введите адрес электронной почты или номер телефона к которому привязан ваш аккаунт.
-          Мы вышлем ссылку для смены пароля.
+          {t('sendLinkToReset')}
         </Typography>
         <RadioTabs
           setActiveTabIndex={handleActiveRadioBtnIndex}
@@ -104,7 +105,7 @@ function ResetPage(props: ResetPageTypes.IProps) {
         >
           <Input
             type="text"
-            placeholder="Напишите почту"
+            placeholder={t('writeEmail')}
             errorMessage={activeRadioBtnIndex === '0' && errorMessage}
             onChange={getEmailOrPhone}
             onKeyDown={onKeyDown(onSubmitButtonClicked(activeRadioBtnIndex, emailOrPhone))}
@@ -122,7 +123,7 @@ function ResetPage(props: ResetPageTypes.IProps) {
           onClick={onSubmitButtonClicked(activeRadioBtnIndex, emailOrPhone)}
           loading={registrationLoading}
         >
-          Отправить
+          {t('send')}
         </Button>
       </Card>
     </AuthOrangeLayout>
