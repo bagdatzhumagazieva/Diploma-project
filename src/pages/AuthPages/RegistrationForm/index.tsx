@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { withTranslation } from 'react-i18next';
+import { useTranslation, withTranslation } from 'react-i18next';
 import moment, { Moment } from 'moment';
 import { onKeyDown } from 'src/utils/helpers';
 
@@ -25,6 +25,7 @@ import { parseTo2DigitFormat } from 'src/utils/format';
 
 function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
   const { onFinishRegistration, profile: asPropsProfile, profileError, getProfile, history } = props;
+  const { t } = useTranslation('common');
 
   const [gender, setGender] = useState<string | null>(null);
   const [phone, setPhone] = useState<string>('');
@@ -76,13 +77,6 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
     setErrorValidationMessage({ ...errorValidationMessage, gender: '' });
   };
 
-  const onChangeBirthDate = (date: IDatePicker) => {
-    const parseBirthDate = moment(`${date.year}-${parseTo2DigitFormat(getMonthCode(date.month))}-${parseTo2DigitFormat(date.day)}`);
-    setErrorValidationMessage({ ...errorValidationMessage, birthDate: '' });
-    setErrorMessage(undefined);
-    setBirthDate(parseBirthDate);
-  };
-
   const onClickSave = () => {
     const { name, surname, checkPassword, password, email, username } = profile;
     const data = {
@@ -99,27 +93,33 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
     };
     setErrorValidationMessage({
       ...errorValidationMessage,
-      name: !name ? 'Это поле обязательное' : '',
-      surname: !surname ? 'Это поле обязательное' : '',
-      password: !isValidPassword(password) ? 'Пароль должен состоять из букв на латинице и цифр. Минимум 6 символов'
-          : '',
-      checkPassword: !checkPassword ? 'Необходимо ввести пароль еще раз' :
-        password !== checkPassword ? 'пароль не совпадает' : '',
-      gender: !gender ? 'Пожалуйста, укажите пол' : '',
-      birthDate: !birthDate ? 'Это поле обязательное' : '',
-      email: !email ? 'Это поле обязательное' : '',
-      username: !username ? 'Это поле обязательное' : '',
+      name: !name ? t('mainField') : '',
+      surname: !surname ? t('mainField') : '',
+      password: !isValidPassword(password) ? t('passwordRequirement') : '',
+      checkPassword: !checkPassword ? t('needToRepeatPassword') :
+    password !== checkPassword ? t('passwordNotMatch') : '',
+      gender: !gender ? t('chooseGender') : '',
+      birthDate: !birthDate ? t('mainField') : '',
+      email: !email ? t('mainField') : '',
+      username: !username ? t('mainField') : '',
     });
     if (checkPassword && surname && isValidPassword(password) &&
-        password === checkPassword && gender && birthDate && email && username) {
+      password === checkPassword && gender && birthDate && email && username) {
       onFinishRegistration && onFinishRegistration(data, {
         onSuccess: (res: any) => {
           if (!res.response.id) return;
-          console.log(res)
+          console.log(res);
           history.push('/');
         },
       });
     }
+  };
+
+  const onChangeBirthDate = (date: IDatePicker) => {
+    const parseBirthDate = moment(`${date.year}-${parseTo2DigitFormat(getMonthCode(date.month))}-${parseTo2DigitFormat(date.day)}`);
+    setErrorValidationMessage({ ...errorValidationMessage, birthDate: '' });
+    setErrorMessage(undefined);
+    setBirthDate(parseBirthDate);
   };
 
   const isValidPassword = (password?: string) => (
@@ -135,22 +135,22 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
             className="mb-16 text-center"
             variant="h1"
           >
-            Заполните данные
+            {t('fillData')}
           </Typography>
           <Typography
             color="grey_additional_2"
             className="mb-32 text-center"
             variant="subtext"
           >
-            Ваши данные нужны для корректного получения сертификатов и достижений.
+            {t('dataIsNecessary')}
           </Typography>
           <div className="registration-form__form">
             <Input
               type="text"
               onChange={onChangeProfileData}
               name="username"
-              placeholder="Ваше Логин"
-              label="Логин"
+              placeholder={t('yourLogin')}
+              label={t('login')}
               value={profile.username}
               errorMessage={errorValidationMessage.username}
               classNames="mb-28"
@@ -159,8 +159,8 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
               type="text"
               onChange={onChangeProfileData}
               name="name"
-              placeholder="Ваше Имя"
-              label="Имя"
+              placeholder={t('yourName')}
+              label={t('name')}
               value={profile.name}
               errorMessage={errorValidationMessage.name}
               classNames="mb-28"
@@ -170,8 +170,8 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
               onChange={onChangeProfileData}
               name="surname"
               value={profile.surname}
-              placeholder="Ваша Фамилия"
-              label="Фамилия"
+              placeholder={t('yourLastname')}
+              label={t('lastname')}
               errorMessage={errorValidationMessage.surname}
               classNames="mb-28"
             />
@@ -187,14 +187,14 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
                 <RadioButton
                   setClicked={radioButtonHandler}
                   classNames="mr-48"
-                  label="Мужской"
+                  label={t('male')}
                   name="gender"
                   value="1"
                   isChecked={'1' === gender}
                 />
                 <RadioButton
                   setClicked={radioButtonHandler}
-                  label="Женский"
+                  label={t('female')}
                   name="gender"
                   value="2"
                   isChecked={'2' === gender}
@@ -221,7 +221,7 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
             />
             <CodeSelect
               className="mb-28"
-              label="Номер телефона"
+              label={t('phoneNumber')}
               onChange={onChangePhone}
               countries={countriesCode}
               errorMessage={errorValidationMessage.phone}
@@ -230,8 +230,8 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
               onChange={onChangeProfileData}
               name="password"
               type="password"
-              placeholder="Введите пароль"
-              label="Придумайте пароль"
+              placeholder={t('writePassword')}
+              label={t('createPassword')}
               classNames="mb-24"
               errorMessage={errorValidationMessage.password}
             />
@@ -239,8 +239,8 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
               onChange={onChangeProfileData}
               name="checkPassword"
               type="password"
-              placeholder="Введите пароль"
-              label="Повторите пароль"
+              placeholder={t('writePassword')}
+              label={t('repeatPassword')}
               classNames="mb-32"
               errorMessage={errorValidationMessage.checkPassword}
               onKeyDown={onKeyDown(onClickSave)}
@@ -259,7 +259,7 @@ function RegistrationFormPage(props: RegistrationFormPageTypes.IProps) {
               variant="textmed"
               // loading={profileLoading}
             >
-              Сохранить
+              {t('save')}
             </Button>
           </div>
         </div>
